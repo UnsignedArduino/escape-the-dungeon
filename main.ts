@@ -323,6 +323,20 @@ tiles.setTilemap(tiles.createTilemap(
         ))
 tiles.placeOnTile(Cat, tiles.getTileLocation(3, 4))
 scene.cameraFollowSprite(Cat)
+info.changeScoreBy(1800)
+Break = 0
+info.startCountdown(180)
+while (Break == 0) {
+    pause(100)
+    info.changeScoreBy(-1)
+    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
+        Break = 1
+        Streak += 1
+        info.stopCountdown()
+        game.showLongText("You made it out alive! (+1000) +" + info.score() + " for timed exit. Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: +" + (1000 + (info.score() + Streak * 1000)), DialogLayout.Center)
+        info.changeScoreBy(1000 + Streak * 1000)
+    }
+}
 game.onUpdateInterval(100, function () {
     if (Cat.vx == 0 && Cat.vy == 0) {
         animation.setAction(Cat, ActionKind.Idle)
