@@ -268,8 +268,16 @@ game.onUpdateInterval(100, function () {
             animation.setAction(Cat, ActionKind.Walking)
         } else if (Cat.vy == 70) {
             animation.setAction(Cat, ActionKind.Walking)
+        } else if (Cat.vx == -100) {
+            animation.setAction(Cat, ActionKind.Walking)
+        } else if (Cat.vy == -100) {
+            animation.setAction(Cat, ActionKind.Walking)
+        } else if (Cat.vx == 100) {
+            animation.setAction(Cat, ActionKind.Walking)
+        } else if (Cat.vy == 100) {
+            animation.setAction(Cat, ActionKind.Walking)
         } else {
-        	
+            animation.setAction(Cat, ActionKind.FastWalk)
         }
     }
 })
