@@ -5,6 +5,27 @@ enum ActionKind {
     FastWalk,
     SlowWalk
 }
+namespace myTiles {
+    //% blockIdentity=images._tile
+    export const tile0 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`
+}
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(Cat, 50, 50)
 })
@@ -36,7 +57,7 @@ f b d d b b d d 2 f . f d f
 `, SpriteKind.Player)
 controller.moveSprite(Cat, 100, 100)
 Cat.setFlag(SpriteFlag.StayInScreen, true)
-Cat.setFlag(SpriteFlag.ShowPhysics, true)
+Cat.setFlag(SpriteFlag.ShowPhysics, false)
 let CatIdleAnim = animation.createAnimation(ActionKind.Idle, 250)
 CatIdleAnim.addAnimationFrame(img`
 e e e . . . . e e e . . . . . 
@@ -236,10 +257,43 @@ f b d d b b d d 2 b f d f .
 }
 animation.attachAnimation(Cat, CatSlowWalkAnim)
 animation.setAction(Cat, ActionKind.Idle)
-scene.setBackgroundColor(9)
-info.setScore(0)
+tiles.setTilemap(tiles.createTilemap(
+            hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0a160b0b0a0a160a0d00000000000019010404040404040518000000000000110209090909091a0714000000000000100209090909091a0715000000000000190308080808080806180000000000000f13171313121217120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 . . . . . . . . 2 2 2 2 
+2 2 2 2 . . . . . . . . 2 2 2 2 
+2 2 2 2 . . . . . . . . 2 2 2 2 
+2 2 2 2 . . . . . . . . 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia],
+            TileScale.Sixteen
+        ))
+tiles.placeOnTile(Cat, tiles.getTileLocation(5, 7))
+scene.cameraFollowSprite(Cat)
+info.setScore(1800)
 game.setDialogTextColor(15)
-game.showLongText("Welcome to Escape the Dungeon! In this game, your goal is to get to the blue and green sphere before time runs out. The faster you get out, the more points you get. Use the joystick to move around. Press A to accelerate or select when next to a lever. Press B to creep along. Press MENU to pause and adjust some settings. Good luck, and get out alive! ", DialogLayout.Bottom)
+game.showLongText("Welcome to Escape the Dungeon! In this game, your goal is to get to the blue square before time runs out. The faster you get out, the more points you get. Use the joystick to move around. Press A to accelerate or select when next to a lever. Press B to creep along. Press MENU to pause and adjust some settings. Good luck, and get out alive! ", DialogLayout.Bottom)
+let Break = 0
+info.startCountdown(180)
+while (Break == 0) {
+    pause(100)
+    info.changeScoreBy(-1)
+    if (true) {
+    	
+    }
+}
 game.onUpdateInterval(100, function () {
     if (Cat.vx == 0 && Cat.vy == 0) {
         animation.setAction(Cat, ActionKind.Idle)
