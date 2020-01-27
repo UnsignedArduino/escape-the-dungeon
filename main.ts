@@ -295,7 +295,7 @@ while (Break == 0) {
         Streak += 1
         info.stopCountdown()
         game.showLongText("You made it out alive! (+1000) +" + info.score() + " for timed exit. Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: +" + (1000 + (info.score() + Streak * 1000)), DialogLayout.Center)
-        info.changeScoreBy(1000 + (info.score() + Streak * 1000))
+        info.changeScoreBy(1000 + Streak * 1000)
     }
 }
 game.onUpdateInterval(100, function () {
