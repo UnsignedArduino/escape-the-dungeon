@@ -26,15 +26,52 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
+function animation_check () {
+    if (Cat.vx == 0 && Cat.vy == 0) {
+        animation.setAction(Cat, ActionKind.Idle)
+    } else {
+        if (Cat.vx == -35) {
+            animation.setAction(Cat, ActionKind.SlowWalk)
+        } else if (Cat.vy == -35) {
+            animation.setAction(Cat, ActionKind.SlowWalk)
+        } else if (Cat.vx == 35) {
+            animation.setAction(Cat, ActionKind.SlowWalk)
+        } else if (Cat.vy == 35) {
+            animation.setAction(Cat, ActionKind.SlowWalk)
+        } else if (Cat.vx == -50) {
+            animation.setAction(Cat, ActionKind.SlowWalk)
+        } else if (Cat.vy == -50) {
+            animation.setAction(Cat, ActionKind.SlowWalk)
+        } else if (Cat.vx == 50) {
+            animation.setAction(Cat, ActionKind.SlowWalk)
+        } else if (Cat.vy == 50) {
+            animation.setAction(Cat, ActionKind.SlowWalk)
+        } else if (Cat.vx == -70) {
+            animation.setAction(Cat, ActionKind.Walking)
+        } else if (Cat.vy == -70) {
+            animation.setAction(Cat, ActionKind.Walking)
+        } else if (Cat.vx == 70) {
+            animation.setAction(Cat, ActionKind.Walking)
+        } else if (Cat.vy == 70) {
+            animation.setAction(Cat, ActionKind.Walking)
+        } else if (Cat.vx == -100) {
+            animation.setAction(Cat, ActionKind.Walking)
+        } else if (Cat.vy == -100) {
+            animation.setAction(Cat, ActionKind.Walking)
+        } else if (Cat.vx == 100) {
+            animation.setAction(Cat, ActionKind.Walking)
+        } else if (Cat.vy == 100) {
+            animation.setAction(Cat, ActionKind.Walking)
+        } else {
+            animation.setAction(Cat, ActionKind.FastWalk)
+        }
+    }
+}
 function level_prep () {
     info.changeScoreBy(1800)
     Break = 0
     info.startCountdown(180)
     scene.cameraFollowSprite(Cat)
-}
-function finished_level () {
-    game.showLongText("You made it out alive! (+1000) +" + info.score() + " for timed exit. Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: +" + (1000 + (info.score() + Streak * 1000)), DialogLayout.Center)
-    info.changeScoreBy(1000 + Streak * 1000)
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(Cat, 50, 50)
@@ -45,6 +82,13 @@ controller.B.onEvent(ControllerButtonEvent.Released, function () {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(Cat, 200, 200)
 })
+function finished_level () {
+    Break = 1
+    Streak += 1
+    info.stopCountdown()
+    game.showLongText("Level " + Streak + " Complete. (+1000) +" + info.score() + " for leaving time. Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Center)
+    info.changeScoreBy(1000 + Streak * 1000)
+}
 controller.A.onEvent(ControllerButtonEvent.Released, function () {
     controller.moveSprite(Cat, 100, 100)
 })
@@ -69,7 +113,7 @@ f b d d b b d d 2 f . f d f
 `, SpriteKind.Player)
 controller.moveSprite(Cat, 100, 100)
 Cat.setFlag(SpriteFlag.StayInScreen, true)
-Cat.setFlag(SpriteFlag.ShowPhysics, false)
+Cat.setFlag(SpriteFlag.ShowPhysics, true)
 let CatIdleAnim = animation.createAnimation(ActionKind.Idle, 250)
 CatIdleAnim.addAnimationFrame(img`
 e e e . . . . e e e . . . . . 
@@ -298,12 +342,10 @@ tiles.placeOnTile(Cat, tiles.getTileLocation(5, 7))
 info.setScore(0)
 level_prep()
 while (Break == 0) {
+    animation_check()
     pause(100)
     info.changeScoreBy(-1)
     if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-        Break = 1
-        Streak += 1
-        info.stopCountdown()
         finished_level()
     }
 }
@@ -333,53 +375,13 @@ tiles.setTilemap(tiles.createTilemap(
 tiles.placeOnTile(Cat, tiles.getTileLocation(3, 4))
 level_prep()
 while (Break == 0) {
+    animation_check()
     pause(100)
     info.changeScoreBy(-1)
     if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-        Break = 1
-        Streak += 1
-        info.stopCountdown()
         finished_level()
     }
 }
 game.onUpdateInterval(100, function () {
-    if (Cat.vx == 0 && Cat.vy == 0) {
-        animation.setAction(Cat, ActionKind.Idle)
-    } else {
-        if (Cat.vx == -35) {
-            animation.setAction(Cat, ActionKind.SlowWalk)
-        } else if (Cat.vy == -35) {
-            animation.setAction(Cat, ActionKind.SlowWalk)
-        } else if (Cat.vx == 35) {
-            animation.setAction(Cat, ActionKind.SlowWalk)
-        } else if (Cat.vy == 35) {
-            animation.setAction(Cat, ActionKind.SlowWalk)
-        } else if (Cat.vx == -50) {
-            animation.setAction(Cat, ActionKind.SlowWalk)
-        } else if (Cat.vy == -50) {
-            animation.setAction(Cat, ActionKind.SlowWalk)
-        } else if (Cat.vx == 50) {
-            animation.setAction(Cat, ActionKind.SlowWalk)
-        } else if (Cat.vy == 50) {
-            animation.setAction(Cat, ActionKind.SlowWalk)
-        } else if (Cat.vx == -70) {
-            animation.setAction(Cat, ActionKind.Walking)
-        } else if (Cat.vy == -70) {
-            animation.setAction(Cat, ActionKind.Walking)
-        } else if (Cat.vx == 70) {
-            animation.setAction(Cat, ActionKind.Walking)
-        } else if (Cat.vy == 70) {
-            animation.setAction(Cat, ActionKind.Walking)
-        } else if (Cat.vx == -100) {
-            animation.setAction(Cat, ActionKind.Walking)
-        } else if (Cat.vy == -100) {
-            animation.setAction(Cat, ActionKind.Walking)
-        } else if (Cat.vx == 100) {
-            animation.setAction(Cat, ActionKind.Walking)
-        } else if (Cat.vy == 100) {
-            animation.setAction(Cat, ActionKind.Walking)
-        } else {
-            animation.setAction(Cat, ActionKind.FastWalk)
-        }
-    }
+    animation_check()
 })
