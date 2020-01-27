@@ -26,6 +26,16 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
+function level_prep () {
+    info.changeScoreBy(1800)
+    Break = 0
+    info.startCountdown(180)
+    scene.cameraFollowSprite(Cat)
+}
+function finished_level () {
+    game.showLongText("You made it out alive! (+1000) +" + info.score() + " for timed exit. Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: +" + (1000 + (info.score() + Streak * 1000)), DialogLayout.Center)
+    info.changeScoreBy(1000 + Streak * 1000)
+}
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(Cat, 50, 50)
 })
@@ -38,6 +48,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.A.onEvent(ControllerButtonEvent.Released, function () {
     controller.moveSprite(Cat, 100, 100)
 })
+let Break = 0
+let Streak = 0
 let Cat: Sprite = null
 Cat = sprites.create(img`
 e e e . . . . e e e . . . . 
@@ -258,7 +270,7 @@ f b d d b b d d 2 b f d f .
 animation.attachAnimation(Cat, CatSlowWalkAnim)
 animation.setAction(Cat, ActionKind.Idle)
 game.showLongText("Welcome to Escape the Dungeon! In this game, your goal is to get to the blue square before time runs out. The faster you get out, the more points you get. Use the joystick to move around. Press A to accelerate or select when next to a lever. Press B to creep along. Press MENU to pause and adjust some settings. Good luck, and get out alive! ", DialogLayout.Bottom)
-let Streak = 0
+Streak = 0
 tiles.setTilemap(tiles.createTilemap(
             hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0a160b0b0a0a160a0d00000000000019010404040404040518000000000000110209090909091a0714000000000000100209090909091a0715000000000000190308080808080806180000000000000f13171313121217120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
             img`
@@ -283,10 +295,8 @@ tiles.setTilemap(tiles.createTilemap(
             TileScale.Sixteen
         ))
 tiles.placeOnTile(Cat, tiles.getTileLocation(5, 7))
-scene.cameraFollowSprite(Cat)
-info.setScore(1800)
-let Break = 0
-info.startCountdown(180)
+info.setScore(0)
+level_prep()
 while (Break == 0) {
     pause(100)
     info.changeScoreBy(-1)
@@ -294,8 +304,7 @@ while (Break == 0) {
         Break = 1
         Streak += 1
         info.stopCountdown()
-        game.showLongText("You made it out alive! (+1000) +" + info.score() + " for timed exit. Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: +" + (1000 + (info.score() + Streak * 1000)), DialogLayout.Center)
-        info.changeScoreBy(1000 + Streak * 1000)
+        finished_level()
     }
 }
 tiles.setTilemap(tiles.createTilemap(
@@ -322,10 +331,7 @@ tiles.setTilemap(tiles.createTilemap(
             TileScale.Sixteen
         ))
 tiles.placeOnTile(Cat, tiles.getTileLocation(3, 4))
-scene.cameraFollowSprite(Cat)
-info.changeScoreBy(1800)
-Break = 0
-info.startCountdown(180)
+level_prep()
 while (Break == 0) {
     pause(100)
     info.changeScoreBy(-1)
@@ -333,8 +339,7 @@ while (Break == 0) {
         Break = 1
         Streak += 1
         info.stopCountdown()
-        game.showLongText("You made it out alive! (+1000) +" + info.score() + " for timed exit. Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: +" + (1000 + (info.score() + Streak * 1000)), DialogLayout.Center)
-        info.changeScoreBy(1000 + Streak * 1000)
+        finished_level()
     }
 }
 game.onUpdateInterval(100, function () {
