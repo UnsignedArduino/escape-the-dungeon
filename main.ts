@@ -290,8 +290,8 @@ info.startCountdown(180)
 while (Break == 0) {
     pause(100)
     info.changeScoreBy(-1)
-    if (true) {
-    	
+    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
+        Break = 1
     }
 }
 game.onUpdateInterval(100, function () {
