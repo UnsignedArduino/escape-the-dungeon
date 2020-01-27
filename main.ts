@@ -26,6 +26,28 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
+function level_prep () {
+    info.changeScoreBy(1800)
+    Break = 0
+    info.startCountdown(180)
+    scene.cameraFollowSprite(Cat)
+}
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    controller.moveSprite(Cat, 50, 50)
+})
+controller.B.onEvent(ControllerButtonEvent.Released, function () {
+    controller.moveSprite(Cat, 100, 100)
+})
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    controller.moveSprite(Cat, 200, 200)
+})
+function finished_level () {
+    Break = 1
+    Streak += 1
+    info.stopCountdown()
+    game.showLongText("Level " + Streak + " Complete. (+1000) +" + info.score() + " for leaving time. Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Center)
+    info.changeScoreBy(1000 + Streak * 1000)
+}
 function animation_check () {
     if (Cat.vx == 0 && Cat.vy == 0) {
         animation.setAction(Cat, ActionKind.Idle)
@@ -67,28 +89,6 @@ function animation_check () {
         }
     }
 }
-function level_prep () {
-    info.changeScoreBy(1800)
-    Break = 0
-    info.startCountdown(180)
-    scene.cameraFollowSprite(Cat)
-}
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    controller.moveSprite(Cat, 50, 50)
-})
-controller.B.onEvent(ControllerButtonEvent.Released, function () {
-    controller.moveSprite(Cat, 100, 100)
-})
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    controller.moveSprite(Cat, 200, 200)
-})
-function finished_level () {
-    Break = 1
-    Streak += 1
-    info.stopCountdown()
-    game.showLongText("Level " + Streak + " Complete. (+1000) +" + info.score() + " for leaving time. Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Center)
-    info.changeScoreBy(1000 + Streak * 1000)
-}
 controller.A.onEvent(ControllerButtonEvent.Released, function () {
     controller.moveSprite(Cat, 100, 100)
 })
@@ -113,7 +113,7 @@ f b d d b b d d 2 f . f d f
 `, SpriteKind.Player)
 controller.moveSprite(Cat, 100, 100)
 Cat.setFlag(SpriteFlag.StayInScreen, true)
-Cat.setFlag(SpriteFlag.ShowPhysics, true)
+Cat.setFlag(SpriteFlag.ShowPhysics, false)
 let CatIdleAnim = animation.createAnimation(ActionKind.Idle, 250)
 CatIdleAnim.addAnimationFrame(img`
 e e e . . . . e e e . . . . . 
