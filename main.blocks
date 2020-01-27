@@ -1,0 +1,181 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="ActionKind" id="lg!%qoA05)peLj)by^:@">0Walking</variable><variable type="ActionKind" id="hP+)Ke2OqdkUwg89mbXG">1Idle</variable><variable type="ActionKind" id="bXrZ!X%b(nNH-pXX$MiC">2Jumping</variable><variable type="ActionKind" id="Hy9#_(|f6-v]d+UO`((W">3FastWalk</variable><variable type="ActionKind" id="J^pp_Zl6iZyw0No#te@N">4SlowWalk</variable><variable id="8WiSYMR[|[5qh?(;[AFi">Cat</variable><variable id="C=%5AS6}:[1qKq-bP4@2">CatIdleAnim</variable><variable id="vG|8!V{hPk(_@ICiLRXN">CatWalkAnim</variable><variable id="B{3NvcGGE%VK[h%T;3)y">CatFastWalkAnim</variable><variable id="~}sP0t)[+OA4VVdDMRdx">CatSlowWalkAnim</variable><variable type="KIND_SpriteKind" id="j,V%|2Zf`W(]Is-ALtbQ">Player</variable><variable type="KIND_SpriteKind" id="]$v=lvWk/=]oxt@?^r`a">Projectile</variable><variable type="KIND_SpriteKind" id=":V4Yk{]hu[%?z$S?kA|T">Food</variable><variable type="KIND_SpriteKind" id="{E72l!%Ct=%_ZpRt@Y9M">Enemy</variable></variables><block type="pxt-on-start" x="0" y="40"><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+e e e . . . . e e e . . . . 
+c d d c . . c d d c . . . . 
+c b d d f f d d b c . . . . 
+c 3 b d d b d b 3 c . . . . 
+f b 3 d d d d 3 b f . . . . 
+e d d d d d d d d e . . . . 
+e d f d d d d f d e . b f b 
+f d d d d d d d d f . f d f 
+f b d d b b d d 2 f . f d f 
+. f 2 2 2 2 2 2 b b f f d f 
+. f b d d d d d d b b d b f 
+. f d d d d d b d d f f f . 
+. f d f f f d f f d f . . . 
+. f f . . f f . . f f . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value><value name="vx"><shadow type="math_number"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">100</field></shadow></value><next><block type="spritesetsetflag"><field name="flag">SpriteFlag.StayInScreen</field><value name="sprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value><value name="on"><shadow type="toggleOnOff"><field name="on">true</field></shadow></value><next><block type="spritesetsetflag"><field name="flag">SpriteFlag.ShowPhysics</field><value name="sprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value><value name="on"><shadow type="toggleOnOff"><field name="on">true</field></shadow></value><next><block type="variables_set"><field name="VAR" id="C=%5AS6}:[1qKq-bP4@2">CatIdleAnim</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="createAnimation"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">Idle</field></shadow></value><value name="interval"><shadow type="math_number"><field name="NUM">250</field></shadow></value></block></value><next><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+e e e . . . . e e e . . . . . 
+c d d c . . c d d c . . . . . 
+c b d d f f d d b c . . . . . 
+c 3 b d d b d b 3 c . . . . . 
+f b 3 d d d d 3 b f . . . . . 
+e d d d d d d d d e . . . . . 
+e d f d d d d f d e . b f b . 
+f d d d d d d d d f . f d f . 
+f b d d b b d d 2 f . f d f . 
+. f 2 2 2 2 2 2 b b f f d f . 
+. f b d d d d d d b b d b f . 
+. f d d d d d b d d f f f . . 
+. f d f f f d f f d f . . . . 
+. f f . . f f . . f f . . . . 
+`</field></shadow></value><value name="this"><shadow type="variables_get"><field name="VAR" id="C=%5AS6}:[1qKq-bP4@2">CatIdleAnim</field></shadow></value><next><block type="controls_repeat_ext"><value name="TIMES"><shadow type="math_whole_number"><field name="NUM">2</field></shadow></value><statement name="DO"><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+e e e . . . . e e e . . . . . 
+c d d c . . c d d c . . . . . 
+c b d d f f d d b c . . . . . 
+c 3 b d d b d b 3 c . . . . . 
+f b 3 d d d d 3 b f . . . . . 
+e d d d d d d d d e . . . . . 
+e d f d d d d f d e . . b f b 
+f d d d d d d d d f . . f d f 
+f b d d b b d d 2 f . . f d f 
+. f 2 2 2 2 2 2 b b f f d d f 
+. f b d d d d d d b b d b f . 
+. f d d d d d b d d f f f . . 
+. f d f f f d f f d f . . . . 
+. f f . . f f . . f f . . . . 
+`</field></shadow></value><value name="this"><shadow type="variables_get"><field name="VAR" id="C=%5AS6}:[1qKq-bP4@2">CatIdleAnim</field></shadow></value></block></statement><next><block type="controls_repeat_ext"><value name="TIMES"><shadow type="math_whole_number"><field name="NUM">4</field></shadow></value><statement name="DO"><block type="controls_repeat_ext"><value name="TIMES"><shadow type="math_whole_number"><field name="NUM">2</field></shadow></value><statement name="DO"><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+e e e . . . . e e e . . . . . 
+c d d c . . c d d c . . . . . 
+c b d d f f d d b c . . . . . 
+c 3 b d d b d b 3 c . . . . . 
+f b 3 d d d d 3 b f . . . . . 
+e d d d d d d d d e . . . . . 
+e d f d d d d f d e . b f b . 
+f d d d d d d d d f . f d f . 
+f b d d b b d d 2 f . f d f . 
+. f 2 2 2 2 2 2 b b f f d f . 
+. f b d d d d d d b b d b f . 
+. f d d d d d b d d f f f . . 
+. f d f f f d f f d f . . . . 
+. f f . . f f . . f f . . . . 
+`</field></shadow></value><value name="this"><shadow type="variables_get"><field name="VAR" id="C=%5AS6}:[1qKq-bP4@2">CatIdleAnim</field></shadow></value></block></statement><next><block type="controls_repeat_ext"><value name="TIMES"><shadow type="math_whole_number"><field name="NUM">2</field></shadow></value><statement name="DO"><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+e e e . . . . e e e . . . . . 
+c d d c . . c d d c . . . . . 
+c b d d f f d d b c . . . . . 
+c 3 b d d b d b 3 c . . . . . 
+f b 3 d d d d 3 b f . . . . . 
+e d d d d d d d d e . . . . . 
+e d f d d d d f d e . . b f b 
+f d d d d d d d d f . . f d f 
+f b d d b b d d 2 f . . f d f 
+. f 2 2 2 2 2 2 b b f f d d f 
+. f b d d d d d d b b d b f . 
+. f d d d d d b d d f f f . . 
+. f d f f f d f f d f . . . . 
+. f f . . f f . . f f . . . . 
+`</field></shadow></value><value name="this"><shadow type="variables_get"><field name="VAR" id="C=%5AS6}:[1qKq-bP4@2">CatIdleAnim</field></shadow></value></block></statement></block></next></block></statement><next><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+e e e . . . . e e e . . . . . 
+c d d c . . c d d c . . . . . 
+c b d d f f d d b c . . . . . 
+c 3 b d d b d b 3 c . . . . . 
+f b 3 d d d d 3 b f . . . . . 
+e d d d d d d d d e . . . . . 
+e d d d d d d d d e . b f b . 
+f d d d d d d d d f . f d f . 
+f b d d b b d d 2 f . f d f . 
+. f 2 2 2 2 2 2 b b f f d f . 
+. f b d d d d d d b b d b f . 
+. f d d d d d b d d f f f . . 
+. f d f f f d f f d f . . . . 
+. f f . . f f . . f f . . . . 
+`</field></shadow></value><value name="this"><shadow type="variables_get"><field name="VAR" id="C=%5AS6}:[1qKq-bP4@2">CatIdleAnim</field></shadow></value><next><block type="attachAnimation"><value name="set"><shadow type="variables_get"><field name="VAR" id="C=%5AS6}:[1qKq-bP4@2">CatIdleAnim</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value><next><block type="variables_set"><field name="VAR" id="vG|8!V{hPk(_@ICiLRXN">CatWalkAnim</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="createAnimation"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">Walking</field></shadow></value><value name="interval"><shadow type="math_number"><field name="NUM">200</field></shadow></value></block></value><next><block type="controls_repeat_ext"><value name="TIMES"><shadow type="math_whole_number"><field name="NUM">4</field></shadow></value><statement name="DO"><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+e e e . . . . e e e . . . . . 
+c d d c . . c d d c . . . . . 
+c b d d f f d d b c . . . . . 
+c 3 b d d b d b 3 c . . . . . 
+f b 3 d d d d 3 b f . . . . . 
+e d d d d d d d d e . . . . . 
+e d f d d d d f d e . b f b . 
+f d d d d d d d d f . f d f . 
+f b d d b b d d 2 f . f d f . 
+. f 2 2 2 2 2 2 b b f f d f . 
+. f b d d d d d d b b d b f . 
+. f d d d d d b d d f f f . . 
+. f d f f f d f f d f . . . . 
+. f f . . f f . . f f . . . . 
+`</field></shadow></value><value name="this"><shadow type="variables_get"><field name="VAR" id="vG|8!V{hPk(_@ICiLRXN">CatWalkAnim</field></shadow></value><next><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . 
+e e e . . . . e e e . . . . 
+c d d c . . c d d c . . . . 
+c b d d f f d d b c . . . . 
+c 3 b d d b d b 3 c . . . . 
+f b 3 d d d d 3 b f . . . . 
+e d d d d d d d d e . . . . 
+e d f d d d d f d e b f b . 
+f d d d d d d d d f f d f . 
+f b d d b b d d 2 b f d f . 
+. f 2 2 2 2 2 2 d b d b f . 
+. f d d d d d d d f f f . . 
+. f d b d f f f d f . . . . 
+. . f f f f . . f f . . . . 
+`</field></shadow></value><value name="this"><shadow type="variables_get"><field name="VAR" id="vG|8!V{hPk(_@ICiLRXN">CatWalkAnim</field></shadow></value></block></next></block></statement><next><block type="attachAnimation"><value name="set"><shadow type="variables_get"><field name="VAR" id="vG|8!V{hPk(_@ICiLRXN">CatWalkAnim</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value><next><block type="variables_set"><field name="VAR" id="B{3NvcGGE%VK[h%T;3)y">CatFastWalkAnim</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="createAnimation"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">FastWalk</field></shadow></value><value name="interval"><shadow type="math_number"><field name="NUM">100</field></shadow></value></block></value><next><block type="controls_repeat_ext"><value name="TIMES"><shadow type="math_whole_number"><field name="NUM">4</field></shadow></value><statement name="DO"><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+e e e . . . . e e e . . . . . 
+c d d c . . c d d c . . . . . 
+c b d d f f d d b c . . . . . 
+c 3 b d d b d b 3 c . . . . . 
+f b 3 d d d d 3 b f . . . . . 
+e d d d d d d d d e . . . . . 
+e d f d d d d f d e . b f b . 
+f d d d d d d d d f . f d f . 
+f b d d b b d d 2 f . f d f . 
+. f 2 2 2 2 2 2 b b f f d f . 
+. f b d d d d d d b b d b f . 
+. f d d d d d b d d f f f . . 
+. f d f f f d f f d f . . . . 
+. f f . . f f . . f f . . . . 
+`</field></shadow></value><value name="this"><shadow type="variables_get"><field name="VAR" id="B{3NvcGGE%VK[h%T;3)y">CatFastWalkAnim</field></shadow></value><next><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . 
+e e e . . . . e e e . . . . 
+c d d c . . c d d c . . . . 
+c b d d f f d d b c . . . . 
+c 3 b d d b d b 3 c . . . . 
+f b 3 d d d d 3 b f . . . . 
+e d d d d d d d d e . . . . 
+e d f d d d d f d e b f b . 
+f d d d d d d d d f f d f . 
+f b d d b b d d 2 b f d f . 
+. f 2 2 2 2 2 2 d b d b f . 
+. f d d d d d d d f f f . . 
+. f d b d f f f d f . . . . 
+. . f f f f . . f f . . . . 
+`</field></shadow></value><value name="this"><shadow type="variables_get"><field name="VAR" id="B{3NvcGGE%VK[h%T;3)y">CatFastWalkAnim</field></shadow></value></block></next></block></statement><next><block type="attachAnimation"><value name="set"><shadow type="variables_get"><field name="VAR" id="B{3NvcGGE%VK[h%T;3)y">CatFastWalkAnim</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value><next><block type="variables_set"><field name="VAR" id="~}sP0t)[+OA4VVdDMRdx">CatSlowWalkAnim</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="createAnimation"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">SlowWalk</field></shadow></value><value name="interval"><shadow type="math_number"><field name="NUM">400</field></shadow></value></block></value><next><block type="controls_repeat_ext"><value name="TIMES"><shadow type="math_whole_number"><field name="NUM">4</field></shadow></value><statement name="DO"><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+e e e . . . . e e e . . . . . 
+c d d c . . c d d c . . . . . 
+c b d d f f d d b c . . . . . 
+c 3 b d d b d b 3 c . . . . . 
+f b 3 d d d d 3 b f . . . . . 
+e d d d d d d d d e . . . . . 
+e d f d d d d f d e . b f b . 
+f d d d d d d d d f . f d f . 
+f b d d b b d d 2 f . f d f . 
+. f 2 2 2 2 2 2 b b f f d f . 
+. f b d d d d d d b b d b f . 
+. f d d d d d b d d f f f . . 
+. f d f f f d f f d f . . . . 
+. f f . . f f . . f f . . . . 
+`</field></shadow></value><value name="this"><shadow type="variables_get"><field name="VAR" id="~}sP0t)[+OA4VVdDMRdx">CatSlowWalkAnim</field></shadow></value><next><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . 
+e e e . . . . e e e . . . . 
+c d d c . . c d d c . . . . 
+c b d d f f d d b c . . . . 
+c 3 b d d b d b 3 c . . . . 
+f b 3 d d d d 3 b f . . . . 
+e d d d d d d d d e . . . . 
+e d f d d d d f d e b f b . 
+f d d d d d d d d f f d f . 
+f b d d b b d d 2 b f d f . 
+. f 2 2 2 2 2 2 d b d b f . 
+. f d d d d d d d f f f . . 
+. f d b d f f f d f . . . . 
+. . f f f f . . f f . . . . 
+`</field></shadow></value><value name="this"><shadow type="variables_get"><field name="VAR" id="~}sP0t)[+OA4VVdDMRdx">CatSlowWalkAnim</field></shadow></value></block></next></block></statement><next><block type="attachAnimation"><value name="set"><shadow type="variables_get"><field name="VAR" id="~}sP0t)[+OA4VVdDMRdx">CatSlowWalkAnim</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value><next><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">Idle</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value><next><block type="gamesetbackgroundcolor"><value name="color"><shadow type="colorindexpicker"><field name="index">9</field></shadow></value><next><block type="hudsetScore"><value name="value"><shadow type="math_number"><field name="NUM">0</field></shadow></value><next><block type="game_dialog_set_text_color"><value name="color"><shadow type="colorindexpicker"><field name="index">15</field></shadow></value><next><block type="game_show_long_text"><field name="layout">DialogLayout.Bottom</field><value name="str"><shadow type="text"><field name="TEXT">Welcome to Escape the Dungeon! In this game, your goal is to get to the blue and green sphere before time runs out. The faster you get out, the more points you get. Use the joystick to move around. Press A to accelerate or select when next to a lever. Press B to creep along. Press MENU to pause and adjust some settings. Good luck, and get out alive! </field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="gameinterval" x="1060" y="0"><value name="period"><shadow type="timePicker"><field name="ms">100</field></shadow></value><statement name="HANDLER"><block type="controls_if"><mutation else="1"/><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_operation"><field name="OP">AND</field><value name="A"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vx</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow></value></block></value><value name="B"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vy</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow></value></block></value></block></value><statement name="DO0"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">Idle</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><statement name="ELSE"><block type="controls_if"><mutation elseif="11" else="1"/><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vx</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">-35</field></shadow></value></block></value><statement name="DO0"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">4SlowWalk</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><value name="IF1"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vy</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">-35</field></shadow></value></block></value><statement name="DO1"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">4SlowWalk</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><value name="IF2"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vx</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">35</field></shadow></value></block></value><statement name="DO2"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">4SlowWalk</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><value name="IF3"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vy</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">35</field></shadow></value></block></value><statement name="DO3"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">4SlowWalk</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><value name="IF4"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vx</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">-50</field></shadow></value></block></value><statement name="DO4"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">4SlowWalk</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><value name="IF5"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vy</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">-50</field></shadow></value></block></value><statement name="DO5"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">4SlowWalk</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><value name="IF6"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vx</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">50</field></shadow></value></block></value><statement name="DO6"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">4SlowWalk</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><value name="IF7"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vy</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">50</field></shadow></value></block></value><statement name="DO7"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">4SlowWalk</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><value name="IF8"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vx</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">-70</field></shadow></value></block></value><statement name="DO8"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">0Walking</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><value name="IF9"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vy</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">-70</field></shadow></value></block></value><statement name="DO9"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">0Walking</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><value name="IF10"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vx</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">70</field></shadow></value></block></value><statement name="DO10"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">0Walking</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement><value name="IF11"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vy</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">70</field></shadow></value></block></value><statement name="DO11"><block type="setAction"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">0Walking</field></shadow></value><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value></block></statement></block></statement></block></statement></block><block type="keyonevent" x="440" y="380"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value><value name="vx"><shadow type="math_number"><field name="NUM">200</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">200</field></shadow></value></block></statement></block><block type="keyonevent" x="480" y="540"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Released</field><statement name="HANDLER"><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value><value name="vx"><shadow type="math_number"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">100</field></shadow></value></block></statement></block><block type="keyonevent" x="480" y="700"><field name="button">controller.B</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value><value name="vx"><shadow type="math_number"><field name="NUM">50</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">50</field></shadow></value></block></statement></block><block type="keyonevent" x="540" y="840"><field name="button">controller.B</field><field name="event">ControllerButtonEvent.Released</field><statement name="HANDLER"><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><shadow type="variables_get"><field name="VAR" id="8WiSYMR[|[5qh?(;[AFi">Cat</field></shadow></value><value name="vx"><shadow type="math_number"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">100</field></shadow></value></block></statement></block></xml>
