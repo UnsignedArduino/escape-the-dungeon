@@ -313,7 +313,7 @@ f b d d b b d d 2 b f d f .
 }
 animation.attachAnimation(Cat, CatSlowWalkAnim)
 animation.setAction(Cat, ActionKind.Idle)
-game.showLongText("Welcome to Escape the Dungeon! In this game, your goal is to get to the blue square before time runs out. The faster you get out, the more points you get. Use the joystick to move around. Press A to accelerate or select when next to a lever. Press B to creep along. Good luck, and get out alive! ", DialogLayout.Bottom)
+game.showLongText("Welcome to Escape the Dungeon! " + "In this game, you will have to get to a teleporter " + "(One of those blue squares) " + "before time runs out! " + "Use A to accelerate and unlock a lever when nearby. " + "Use B to creep along and lock levers. " + "Have fun, and get out!", DialogLayout.Bottom)
 Streak = 0
 info.setScore(0)
 while (true) {
@@ -412,6 +412,9 @@ while (true) {
         animation_check()
         pause(100)
         info.changeScoreBy(-1)
+        if (Cat.tileKindAt(TileDirection.Center, myTiles.tile0)) {
+            game.over(false)
+        }
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
             finished_level()
         }
