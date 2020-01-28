@@ -26,14 +26,6 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
-function check_for_lava () {
-    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.hazardLava0)) {
-        game.over(false)
-    }
-    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.hazardLava1)) {
-        game.over(false)
-    }
-}
 function level_prep () {
     info.changeScoreBy(1800)
     Break = 0
@@ -49,6 +41,14 @@ controller.B.onEvent(ControllerButtonEvent.Released, function () {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(Cat, 200, 200)
 })
+function check_for_lava () {
+    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.hazardLava0)) {
+        game.over(false)
+    }
+    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.hazardLava1)) {
+        game.over(false)
+    }
+}
 function finished_level () {
     Break = 1
     Streak += 1
