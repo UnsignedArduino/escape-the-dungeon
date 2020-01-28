@@ -45,7 +45,7 @@ function finished_level () {
     Break = 1
     Streak += 1
     info.stopCountdown()
-    game.showLongText("Level " + Streak + " Complete. (+1000) +" + info.score() + " for leaving time. Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Center)
+    game.showLongText("Level " + Streak + " Complete. (+1000) " + "Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Bottom)
     info.changeScoreBy(1000 + Streak * 1000)
 }
 function animation_check () {
@@ -315,7 +315,8 @@ animation.attachAnimation(Cat, CatSlowWalkAnim)
 animation.setAction(Cat, ActionKind.Idle)
 game.showLongText("Welcome to Escape the Dungeon! In this game, your goal is to get to the blue square before time runs out. The faster you get out, the more points you get. Use the joystick to move around. Press A to accelerate or select when next to a lever. Press B to creep along. Good luck, and get out alive! ", DialogLayout.Bottom)
 Streak = 0
-tiles.setTilemap(tiles.createTilemap(
+while (true) {
+    tiles.setTilemap(tiles.createTilemap(
             hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0a160b0b0a0a160a0d00000000000019010404040404040518000000000000110209090909091a0714000000000000100209090909091a0715000000000000190308080808080806180000000000000f13171313121217120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
             img`
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
@@ -338,18 +339,18 @@ tiles.setTilemap(tiles.createTilemap(
             [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia],
             TileScale.Sixteen
         ))
-tiles.placeOnTile(Cat, tiles.getTileLocation(5, 7))
-info.setScore(0)
-level_prep()
-while (Break == 0) {
-    animation_check()
-    pause(100)
-    info.changeScoreBy(-1)
-    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-        finished_level()
+    tiles.placeOnTile(Cat, tiles.getTileLocation(5, 7))
+    info.setScore(0)
+    level_prep()
+    while (Break == 0) {
+        animation_check()
+        pause(100)
+        info.changeScoreBy(-1)
+        if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
+            finished_level()
+        }
     }
-}
-tiles.setTilemap(tiles.createTilemap(
+    tiles.setTilemap(tiles.createTilemap(
             hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0b160b0a0a160a0d000c160d00000019090909090909091800111a150000000f1217131213170915000f130e000000000000000000150915000000000000000c0a160b0a0b16091400000000000000191a09090909090918000000000000000f121712131317130e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
             img`
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
@@ -372,14 +373,15 @@ tiles.setTilemap(tiles.createTilemap(
             [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia],
             TileScale.Sixteen
         ))
-tiles.placeOnTile(Cat, tiles.getTileLocation(3, 4))
-level_prep()
-while (Break == 0) {
-    animation_check()
-    pause(100)
-    info.changeScoreBy(-1)
-    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-        finished_level()
+    tiles.placeOnTile(Cat, tiles.getTileLocation(3, 4))
+    level_prep()
+    while (Break == 0) {
+        animation_check()
+        pause(100)
+        info.changeScoreBy(-1)
+        if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
+            finished_level()
+        }
     }
 }
 game.onUpdateInterval(100, function () {
