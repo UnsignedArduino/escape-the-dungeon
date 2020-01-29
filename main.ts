@@ -438,6 +438,41 @@ while (true) {
             finished_level()
         }
     }
+    tiles.setTilemap(tiles.createTilemap(
+            hex`100010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0b160a0b0b0b0a0b160b0d00000000100909091e1f1e1f1e1f1e1500000000190909091f0909091f1a1f1800000000110909091e091e091e091e1400000000100909091f091f091f091f1500000000100909091e091e091e091e14000000001909090909091f0909091f1800000000110909091e1f1e1f1e1f1e15000000000f121713121212131317120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1],
+            TileScale.Sixteen
+        ))
+    tiles.placeOnTile(Cat, tiles.getTileLocation(4, 6))
+    level_prep()
+    while (Break == 0) {
+        pause(100)
+        info.changeScoreBy(-1)
+        check_for_lava()
+        animation_check()
+        check_for_death()
+        if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
+            finished_level()
+        }
+    }
 }
 game.onUpdateInterval(100, function () {
     animation_check()
