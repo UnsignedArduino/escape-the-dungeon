@@ -26,20 +26,20 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
-function check_for_death () {
-    if (Dead == 1) {
-        game.over(false)
-    }
-}
 function level_prep () {
     info.changeScoreBy(1800)
     Break = 0
-    info.startCountdown(5)
+    info.startCountdown(180)
     scene.cameraFollowSprite(Cat)
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(Cat, 50, 50)
 })
+function check_for_death () {
+    if (Dead == 1) {
+        game.over(false)
+    }
+}
 controller.B.onEvent(ControllerButtonEvent.Released, function () {
     controller.moveSprite(Cat, 100, 100)
 })
