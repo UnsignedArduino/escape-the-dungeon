@@ -26,10 +26,15 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
+function check_for_death () {
+    if (Dead == 1) {
+        game.over(false)
+    }
+}
 function level_prep () {
     info.changeScoreBy(1800)
     Break = 0
-    info.startCountdown(180)
+    info.startCountdown(5)
     scene.cameraFollowSprite(Cat)
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -56,6 +61,9 @@ function finished_level () {
     game.showLongText("Level " + Streak + " Complete. (+1000) " + "Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Bottom)
     info.changeScoreBy(1000 + Streak * 1000)
 }
+info.onCountdownEnd(function () {
+    Dead = 1
+})
 function animation_check () {
     if (Cat.vx == 0 && Cat.vy == 0) {
         animation.setAction(Cat, ActionKind.Idle)
@@ -101,6 +109,7 @@ controller.A.onEvent(ControllerButtonEvent.Released, function () {
     controller.moveSprite(Cat, 100, 100)
 })
 let Break = 0
+let Dead = 0
 let Streak = 0
 let Cat: Sprite = null
 Cat = sprites.create(img`
@@ -323,6 +332,7 @@ animation.attachAnimation(Cat, CatSlowWalkAnim)
 animation.setAction(Cat, ActionKind.Idle)
 game.showLongText("Welcome to Escape the Dungeon! " + "In this game, you will have to get to a teleporter " + "(One of those blue squares) " + "before time runs out! " + "Use A to accelerate and unlock a lever when nearby. " + "Use B to creep along and lock levers. " + "Have fun, and get out!", DialogLayout.Bottom)
 Streak = 0
+Dead = 0
 info.setScore(0)
 while (true) {
     tiles.setTilemap(tiles.createTilemap(
@@ -351,9 +361,10 @@ while (true) {
     tiles.placeOnTile(Cat, tiles.getTileLocation(5, 7))
     level_prep()
     while (Break == 0) {
-        animation_check()
         pause(100)
         info.changeScoreBy(-1)
+        animation_check()
+        check_for_death()
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
             finished_level()
         }
@@ -384,9 +395,10 @@ while (true) {
     tiles.placeOnTile(Cat, tiles.getTileLocation(3, 4))
     level_prep()
     while (Break == 0) {
-        animation_check()
         pause(100)
         info.changeScoreBy(-1)
+        animation_check()
+        check_for_death()
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
             finished_level()
         }
@@ -417,10 +429,11 @@ while (true) {
     tiles.placeOnTile(Cat, tiles.getTileLocation(4, 6))
     level_prep()
     while (Break == 0) {
-        animation_check()
         pause(100)
         info.changeScoreBy(-1)
         check_for_lava()
+        animation_check()
+        check_for_death()
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
             finished_level()
         }
