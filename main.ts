@@ -26,6 +26,13 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
+function check_for_chest (points: number, x: number, y: number) {
+    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.chestClosed)) {
+        game.showLongText("You opened a chest! +" + points, DialogLayout.Bottom)
+        info.changeScoreBy(points)
+        tiles.setTileAt(tiles.getTileLocation(x, y), sprites.dungeon.chestOpen)
+    }
+}
 function level_prep () {
     info.changeScoreBy(1800)
     Break = 0
@@ -330,7 +337,7 @@ f b d d b b d d 2 b f d f .
 }
 animation.attachAnimation(Cat, CatSlowWalkAnim)
 animation.setAction(Cat, ActionKind.Idle)
-game.showLongText("Welcome to Escape the Dungeon! " + "In this game, you will have to get to a teleporter " + "(One of those blue squares) " + "before time runs out! " + "Use A to accelerate and unlock a lever when nearby. " + "Use B to creep along and lock levers. " + "Have fun, and get out!", DialogLayout.Bottom)
+game.showLongText("Welcome to Escape the Dungeon! " + "In this game, you will have to get to a teleporter " + "(One of those blue squares) " + "before time runs out! " + "Use A to accelerate and unlock a lever when nearby. " + "Use B to creep along and lock levers. " + "Have fun, and get out! " + "                 Made by Cyrus and Elisa Yiu.", DialogLayout.Bottom)
 Streak = 0
 Dead = 0
 info.setScore(0)
@@ -397,6 +404,7 @@ forever(function () {
         ))
     tiles.placeOnTile(Cat, tiles.getTileLocation(3, 4))
     level_prep()
+    game.showLongText("You don't have to touch the only blue square you see :)", DialogLayout.Bottom)
     while (Break == 0) {
         pause(100)
         info.changeScoreBy(-1)
@@ -431,6 +439,7 @@ forever(function () {
         ))
     tiles.placeOnTile(Cat, tiles.getTileLocation(4, 7))
     level_prep()
+    game.showLongText("Don't touch the lava!", DialogLayout.Bottom)
     while (Break == 0) {
         pause(100)
         info.changeScoreBy(-1)
@@ -466,12 +475,50 @@ forever(function () {
         ))
     tiles.placeOnTile(Cat, tiles.getTileLocation(4, 6))
     level_prep()
+    game.showLongText("This is a good time to sneak using B", DialogLayout.Bottom)
     while (Break == 0) {
         pause(100)
         info.changeScoreBy(-1)
         check_for_lava()
         animation_check()
         check_for_death()
+        if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
+            finished_level()
+        }
+    }
+    tiles.setTilemap(tiles.createTilemap(
+            hex`100010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0b160a0b0b0b0a0b160b0d00000000100909091e1f1e1f1e1f1e1500000000190909091f1e1f1e1f1a1f1800000000110909091e1f1e1f1e091e1400000000100909090909090909091f1500000000100909091e1f1e1f1e091e1400000000190909091f1e1f1e1f1c1f1800000000110909091e1f1e1f1e1f1e15000000000f121713121212131317120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.chestOpen],
+            TileScale.Sixteen
+        ))
+    tiles.placeOnTile(Cat, tiles.getTileLocation(4, 6))
+    level_prep()
+    game.showLongText("Chests get you extra points!", DialogLayout.Bottom)
+    while (Break == 0) {
+        pause(100)
+        info.changeScoreBy(-1)
+        check_for_lava()
+        animation_check()
+        check_for_death()
+        check_for_chest(2500, 11, 10)
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
             finished_level()
         }
