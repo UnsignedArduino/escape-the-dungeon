@@ -26,18 +26,12 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
-function check_for_chest (points: number, x: number, y: number) {
-    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.chestClosed)) {
-        game.showLongText("You opened a chest! +" + points, DialogLayout.Bottom)
-        info.changeScoreBy(points)
-        tiles.setTileAt(tiles.getTileLocation(x, y), sprites.dungeon.chestOpen)
-    }
-}
-function level_prep () {
+function level_prep (xp: number, yp: number) {
     info.changeScoreBy(1800)
     Break = 0
     info.startCountdown(180)
     scene.cameraFollowSprite(Cat)
+    tiles.placeOnTile(Cat, tiles.getTileLocation(xp, yp))
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(Cat, 50, 50)
@@ -67,6 +61,13 @@ function finished_level () {
     info.stopCountdown()
     game.showLongText("Level " + Streak + " Complete. (+1000) " + "Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Bottom)
     info.changeScoreBy(1000 + Streak * 1000)
+}
+function check_for_chest (points: number, x: number, y: number) {
+    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.chestClosed)) {
+        game.showLongText("You opened a chest! +" + points, DialogLayout.Bottom)
+        info.changeScoreBy(points)
+        tiles.setTileAt(tiles.getTileLocation(x, y), sprites.dungeon.chestOpen)
+    }
 }
 info.onCountdownEnd(function () {
     Dead = 1
@@ -368,8 +369,7 @@ forever(function () {
             [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia],
             TileScale.Sixteen
         ))
-    tiles.placeOnTile(Cat, tiles.getTileLocation(5, 7))
-    level_prep()
+    level_prep(5, 7)
     while (Break == 0) {
         pause(100)
         info.changeScoreBy(-1)
@@ -402,8 +402,7 @@ forever(function () {
             [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia],
             TileScale.Sixteen
         ))
-    tiles.placeOnTile(Cat, tiles.getTileLocation(3, 4))
-    level_prep()
+    level_prep(3, 4)
     game.showLongText("You don't have to touch the only blue square you see :)", DialogLayout.Bottom)
     while (Break == 0) {
         pause(100)
@@ -437,8 +436,7 @@ forever(function () {
             [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1],
             TileScale.Sixteen
         ))
-    tiles.placeOnTile(Cat, tiles.getTileLocation(4, 7))
-    level_prep()
+    level_prep(4, 7)
     game.showLongText("Don't touch the lava!", DialogLayout.Bottom)
     while (Break == 0) {
         pause(100)
@@ -473,8 +471,7 @@ forever(function () {
             [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1],
             TileScale.Sixteen
         ))
-    tiles.placeOnTile(Cat, tiles.getTileLocation(4, 6))
-    level_prep()
+    level_prep(4, 6)
     game.showLongText("This is a good time to sneak using B", DialogLayout.Bottom)
     while (Break == 0) {
         pause(100)
@@ -509,8 +506,7 @@ forever(function () {
             [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.chestOpen],
             TileScale.Sixteen
         ))
-    tiles.placeOnTile(Cat, tiles.getTileLocation(4, 6))
-    level_prep()
+    level_prep(4, 6)
     game.showLongText("Chests get you extra points!", DialogLayout.Bottom)
     while (Break == 0) {
         pause(100)
@@ -523,4 +519,5 @@ forever(function () {
             finished_level()
         }
     }
+    game.over(true, effects.confetti)
 })
