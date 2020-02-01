@@ -26,15 +26,15 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
-function level_7 () {
-	
-}
 function level_prep (xp: number, yp: number) {
     info.changeScoreBy(1800)
     Break = 0
     info.startCountdown(180)
     scene.cameraFollowSprite(Cat)
     tiles.placeOnTile(Cat, tiles.getTileLocation(xp, yp))
+}
+function level_7 () {
+	
 }
 function level_3 () {
     tiles.setTilemap(tiles.createTilemap(
@@ -195,18 +195,26 @@ function level_6 () {
             if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchUp)) {
                 if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark1)) {
                     tiles.setTileAt(tiles.getTileLocation(3, 4), sprites.dungeon.greenSwitchDown)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(6, 8), sprites.dungeon.darkGroundCenter)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(7, 8), sprites.dungeon.darkGroundCenter)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(8, 8), sprites.dungeon.darkGroundCenter)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(9, 8), sprites.dungeon.darkGroundCenter)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(10, 8), sprites.dungeon.darkGroundCenter)
-                    tiles.setTileAt(tiles.getTileLocation(11, 8), sprites.dungeon.darkGroundCenter)
-                    tiles.setTileAt(tiles.getTileLocation(11, 7), sprites.dungeon.darkGroundCenter)
                     tiles.setTileAt(tiles.getTileLocation(9, 7), sprites.dungeon.darkGroundCenter)
+                    pause(500)
+                    tiles.setTileAt(tiles.getTileLocation(11, 8), sprites.dungeon.darkGroundCenter)
                     tiles.setTileAt(tiles.getTileLocation(9, 6), sprites.dungeon.darkGroundNorth)
+                    pause(500)
+                    tiles.setTileAt(tiles.getTileLocation(11, 7), sprites.dungeon.darkGroundCenter)
                 }
                 if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark0)) {
                     tiles.setTileAt(tiles.getTileLocation(9, 4), sprites.dungeon.greenSwitchDown)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(11, 9), sprites.dungeon.darkGroundCenter)
                 }
             }
@@ -215,18 +223,26 @@ function level_6 () {
             if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchDown)) {
                 if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark1)) {
                     tiles.setTileAt(tiles.getTileLocation(3, 4), sprites.dungeon.greenSwitchUp)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(6, 8), sprites.dungeon.hazardLava1)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(7, 8), sprites.dungeon.hazardLava0)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(8, 8), sprites.dungeon.hazardLava1)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(9, 8), sprites.dungeon.hazardLava0)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(10, 8), sprites.dungeon.hazardLava1)
-                    tiles.setTileAt(tiles.getTileLocation(11, 8), sprites.dungeon.hazardLava0)
-                    tiles.setTileAt(tiles.getTileLocation(11, 7), sprites.dungeon.hazardLava1)
-                    tiles.setTileAt(tiles.getTileLocation(9, 6), sprites.dungeon.hazardLava0)
                     tiles.setTileAt(tiles.getTileLocation(9, 7), sprites.dungeon.hazardLava1)
+                    pause(500)
+                    tiles.setTileAt(tiles.getTileLocation(11, 8), sprites.dungeon.hazardLava0)
+                    tiles.setTileAt(tiles.getTileLocation(9, 6), sprites.dungeon.hazardLava0)
+                    pause(500)
+                    tiles.setTileAt(tiles.getTileLocation(11, 7), sprites.dungeon.hazardLava1)
                 }
                 if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark0)) {
                     tiles.setTileAt(tiles.getTileLocation(9, 4), sprites.dungeon.greenSwitchUp)
+                    pause(500)
                     tiles.setTileAt(tiles.getTileLocation(11, 9), sprites.dungeon.hazardLava1)
                 }
             }
