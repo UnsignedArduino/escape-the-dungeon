@@ -26,76 +26,15 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
-function level_1 () {
-    tiles.setTilemap(tiles.createTilemap(
-            hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0a160b0b0a0a160a0d00000000000019010404040404040518000000000000110209090909091a0714000000000000100209090909091a0715000000000000190308080808080806180000000000000f13171313121217120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
-            img`
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 . . . . . . . . 2 2 2 2 
-2 2 2 2 . . . . . . . . 2 2 2 2 
-2 2 2 2 . . . . . . . . 2 2 2 2 
-2 2 2 2 . . . . . . . . 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-`,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia],
-            TileScale.Sixteen
-        ))
-    level_prep(5, 7)
-    while (Break == 0) {
-        pause(100)
-        info.changeScoreBy(-1)
-        animation_check()
-        check_for_death()
-        if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
-        }
-    }
+function level_7 () {
+	
 }
-function level_2 () {
-    tiles.setTilemap(tiles.createTilemap(
-            hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0b160b0a0a160a0d000c160d00000019090909090909091800111a150000000f1217131213170915000f130e000000000000000000150915000000000000000c0a160b0a0b16091400000000000000191a09090909090918000000000000000f121712131317130e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
-            img`
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 . . . . . . . 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 . 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 . 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 . 2 2 2 2 2 2 
-2 2 2 . . . . . . . 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-`,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia],
-            TileScale.Sixteen
-        ))
-    level_prep(3, 4)
-    game.showLongText("You don't have to touch the only blue square you see :)", DialogLayout.Bottom)
-    while (Break == 0) {
-        pause(100)
-        info.changeScoreBy(-1)
-        animation_check()
-        check_for_death()
-        if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
-        }
-    }
+function level_prep (xp: number, yp: number) {
+    info.changeScoreBy(1800)
+    Break = 0
+    info.startCountdown(180)
+    scene.cameraFollowSprite(Cat)
+    tiles.placeOnTile(Cat, tiles.getTileLocation(xp, yp))
 }
 function level_3 () {
     tiles.setTilemap(tiles.createTilemap(
@@ -134,36 +73,38 @@ function level_3 () {
         }
     }
 }
-function level_4 () {
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    controller.moveSprite(Cat, 50, 50)
+})
+function level_2 () {
     tiles.setTilemap(tiles.createTilemap(
-            hex`100010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0b160a0b0b0b0a0b160b0d00000000100909091e1f1e1f1e1f1e1500000000190909091f0909091f1a1f1800000000110909091e091e091e091e1400000000100909091f091f091f091f1500000000100909091e091e091e091e14000000001909090909091f0909091f1800000000110909091e1f1e1f1e1f1e15000000000f121713121212131317120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0b160b0a0a160a0d000c160d00000019090909090909091800111a150000000f1217131213170915000f130e000000000000000000150915000000000000000c0a160b0a0b16091400000000000000191a09090909090918000000000000000f121712131317130e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
             img`
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 . . . . . . . 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 . 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 . 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 . 2 2 2 2 2 2 
+2 2 2 . . . . . . . 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1],
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia],
             TileScale.Sixteen
         ))
-    level_prep(4, 6)
-    game.showLongText("This is a good time to sneak using B", DialogLayout.Bottom)
+    level_prep(3, 4)
+    game.showLongText("You don't have to touch the only blue square you see :)", DialogLayout.Bottom)
     while (Break == 0) {
         pause(100)
         info.changeScoreBy(-1)
-        check_for_lava()
         animation_check()
         check_for_death()
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
@@ -171,44 +112,49 @@ function level_4 () {
         }
     }
 }
-function level_5 () {
+function level_1 () {
     tiles.setTilemap(tiles.createTilemap(
-            hex`100010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0b160a0b0b0b0a0b160b0d00000000100909091e1f1e1f1e1f1e1500000000190909091f1e1f1e1f1a1f1800000000110909091e1f1e1f1e091e1400000000100909090909090909091f1500000000100909091e1f1e1f1e091e1400000000190909091f1e1f1e1f1c1f1800000000110909091e1f1e1f1e1f1e15000000000f121713121212131317120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0a160b0b0a0a160a0d00000000000019010404040404040518000000000000110209090909091a0714000000000000100209090909091a0715000000000000190308080808080806180000000000000f13171313121217120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
             img`
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
-2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 . . . . . . . . 2 2 2 2 
+2 2 2 2 . . . . . . . . 2 2 2 2 
+2 2 2 2 . . . . . . . . 2 2 2 2 
+2 2 2 2 . . . . . . . . 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.chestOpen],
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia],
             TileScale.Sixteen
         ))
-    level_prep(4, 6)
-    game.showLongText("Chests get you extra points!", DialogLayout.Bottom)
+    level_prep(5, 7)
     while (Break == 0) {
         pause(100)
         info.changeScoreBy(-1)
-        check_for_lava()
         animation_check()
         check_for_death()
-        check_for_chest(2500, 11, 10)
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
             finished_level()
         }
     }
 }
+function check_for_death () {
+    if (Dead == 1) {
+        game.over(false)
+    }
+}
+controller.B.onEvent(ControllerButtonEvent.Released, function () {
+    controller.moveSprite(Cat, 100, 100)
+})
 function level_6 () {
     tiles.setTilemap(tiles.createTilemap(
             hex`100010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c22160a0b0b0b220b160b0d00000000102702091e1f1e261e1f1e1500000000190428091f1e1f1e1f1a1f1800000000110909091e1f1e1f1e1f1e1400000000100909091f1e1f1e1f1e1f1500000000100909091e1f1e1f1e1f1e1400000000190909091f1e1f1e1f1c1f1800000000110909091e1f1e1f1e1f1e15000000000f121713121212131317120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
@@ -287,24 +233,6 @@ function level_6 () {
         }
     }
 }
-function level_prep (xp: number, yp: number) {
-    info.changeScoreBy(1800)
-    Break = 0
-    info.startCountdown(180)
-    scene.cameraFollowSprite(Cat)
-    tiles.placeOnTile(Cat, tiles.getTileLocation(xp, yp))
-}
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    controller.moveSprite(Cat, 50, 50)
-})
-function check_for_death () {
-    if (Dead == 1) {
-        game.over(false)
-    }
-}
-controller.B.onEvent(ControllerButtonEvent.Released, function () {
-    controller.moveSprite(Cat, 100, 100)
-})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(Cat, 200, 200)
 })
@@ -322,6 +250,81 @@ function finished_level () {
     info.stopCountdown()
     game.showLongText("Level " + Streak + " Complete. (+1000) " + "Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Bottom)
     info.changeScoreBy(1000 + Streak * 1000)
+}
+function level_4 () {
+    tiles.setTilemap(tiles.createTilemap(
+            hex`100010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0b160a0b0b0b0a0b160b0d00000000100909091e1f1e1f1e1f1e1500000000190909091f0909091f1a1f1800000000110909091e091e091e091e1400000000100909091f091f091f091f1500000000100909091e091e091e091e14000000001909090909091f0909091f1800000000110909091e1f1e1f1e1f1e15000000000f121713121212131317120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1],
+            TileScale.Sixteen
+        ))
+    level_prep(4, 6)
+    game.showLongText("This is a good time to sneak using B", DialogLayout.Bottom)
+    while (Break == 0) {
+        pause(100)
+        info.changeScoreBy(-1)
+        check_for_lava()
+        animation_check()
+        check_for_death()
+        if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
+            finished_level()
+        }
+    }
+}
+function level_5 () {
+    tiles.setTilemap(tiles.createTilemap(
+            hex`100010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0b160a0b0b0b0a0b160b0d00000000100909091e1f1e1f1e1f1e1500000000190909091f1e1f1e1f1a1f1800000000110909091e1f1e1f1e091e1400000000100909090909090909091f1500000000100909091e1f1e1f1e091e1400000000190909091f1e1f1e1f1c1f1800000000110909091e1f1e1f1e1f1e15000000000f121713121212131317120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.chestOpen],
+            TileScale.Sixteen
+        ))
+    level_prep(4, 6)
+    game.showLongText("Chests get you extra points!", DialogLayout.Bottom)
+    while (Break == 0) {
+        pause(100)
+        info.changeScoreBy(-1)
+        check_for_lava()
+        animation_check()
+        check_for_death()
+        check_for_chest(2500, 11, 10)
+        if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
+            finished_level()
+        }
+    }
 }
 function check_for_chest (points: number, x: number, y: number) {
     if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.chestClosed)) {
@@ -613,5 +616,6 @@ forever(function () {
     level_4()
     level_5()
     level_6()
+    level_7()
     game.over(true, effects.confetti)
 })
