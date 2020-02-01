@@ -519,5 +519,81 @@ forever(function () {
             finished_level()
         }
     }
+    tiles.setTilemap(tiles.createTilemap(
+            hex`100010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c22160a0b0b0b220b160b0d00000000102702091e1f1e261e1f1e1500000000190428091f1e1f1e1f1a1f1800000000110909091e1f1e1f1e1f1e1400000000100909091f1e1f1e1f1e1f1500000000100909091e1f1e1f1e1f1e1400000000190909091f1e1f1e1f1c1f1800000000110909091e1f1e1f1e1f1e15000000000f121713121212131317120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 . . . . . . . . . . 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.chestOpen,sprites.dungeon.greenSwitchUp,sprites.dungeon.greenSwitchDown,sprites.dungeon.floorLight0,sprites.dungeon.floorLight4,sprites.dungeon.floorDark0,sprites.dungeon.floorDark1,sprites.dungeon.darkGroundSouthEast1,sprites.dungeon.purpleSwitchUp],
+            TileScale.Sixteen
+        ))
+    level_prep(4, 6)
+    game.showLongText("Use A and B to switch levers", DialogLayout.Bottom)
+    while (Break == 0) {
+        pause(100)
+        info.changeScoreBy(-1)
+        check_for_lava()
+        animation_check()
+        check_for_death()
+        check_for_chest(5000, 11, 10)
+        if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
+            finished_level()
+        }
+        if (controller.A.isPressed()) {
+            if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchUp)) {
+                if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark1)) {
+                    tiles.setTileAt(tiles.getTileLocation(3, 4), sprites.dungeon.greenSwitchDown)
+                    tiles.setTileAt(tiles.getTileLocation(6, 8), sprites.dungeon.darkGroundCenter)
+                    tiles.setTileAt(tiles.getTileLocation(7, 8), sprites.dungeon.darkGroundCenter)
+                    tiles.setTileAt(tiles.getTileLocation(8, 8), sprites.dungeon.darkGroundCenter)
+                    tiles.setTileAt(tiles.getTileLocation(9, 8), sprites.dungeon.darkGroundCenter)
+                    tiles.setTileAt(tiles.getTileLocation(10, 8), sprites.dungeon.darkGroundCenter)
+                    tiles.setTileAt(tiles.getTileLocation(11, 8), sprites.dungeon.darkGroundCenter)
+                    tiles.setTileAt(tiles.getTileLocation(11, 7), sprites.dungeon.darkGroundCenter)
+                    tiles.setTileAt(tiles.getTileLocation(9, 7), sprites.dungeon.darkGroundCenter)
+                    tiles.setTileAt(tiles.getTileLocation(9, 6), sprites.dungeon.darkGroundNorth)
+                }
+                if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark0)) {
+                    tiles.setTileAt(tiles.getTileLocation(9, 4), sprites.dungeon.greenSwitchDown)
+                    tiles.setTileAt(tiles.getTileLocation(11, 9), sprites.dungeon.darkGroundCenter)
+                }
+            }
+        }
+        if (controller.B.isPressed()) {
+            if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchDown)) {
+                if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark1)) {
+                    tiles.setTileAt(tiles.getTileLocation(3, 4), sprites.dungeon.greenSwitchUp)
+                    tiles.setTileAt(tiles.getTileLocation(6, 8), sprites.dungeon.hazardLava1)
+                    tiles.setTileAt(tiles.getTileLocation(7, 8), sprites.dungeon.hazardLava0)
+                    tiles.setTileAt(tiles.getTileLocation(8, 8), sprites.dungeon.hazardLava1)
+                    tiles.setTileAt(tiles.getTileLocation(9, 8), sprites.dungeon.hazardLava0)
+                    tiles.setTileAt(tiles.getTileLocation(10, 8), sprites.dungeon.hazardLava1)
+                    tiles.setTileAt(tiles.getTileLocation(11, 8), sprites.dungeon.hazardLava0)
+                    tiles.setTileAt(tiles.getTileLocation(11, 7), sprites.dungeon.hazardLava1)
+                    tiles.setTileAt(tiles.getTileLocation(9, 6), sprites.dungeon.hazardLava0)
+                    tiles.setTileAt(tiles.getTileLocation(9, 7), sprites.dungeon.hazardLava1)
+                }
+                if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark0)) {
+                    tiles.setTileAt(tiles.getTileLocation(9, 4), sprites.dungeon.greenSwitchUp)
+                    tiles.setTileAt(tiles.getTileLocation(11, 9), sprites.dungeon.hazardLava1)
+                }
+            }
+        }
+    }
     game.over(true, effects.confetti)
 })
