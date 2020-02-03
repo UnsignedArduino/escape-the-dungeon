@@ -68,10 +68,28 @@ function level_7 () {
         if (controller.A.isPressed()) {
             if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchUp)) {
                 if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark1)) {
-                    tiles.setTileAt(tiles.getTileLocation(3, 4), sprites.dungeon.greenSwitchDown)
+                    tiles.setTileAt(tiles.getTileLocation(13, 0), sprites.dungeon.greenSwitchDown)
+                    pause(500)
+                    tiles.setTileAt(tiles.getTileLocation(13, 6), sprites.dungeon.darkGroundCenter)
+                    pause(500)
+                    tiles.setTileAt(tiles.getTileLocation(13, 7), sprites.dungeon.darkGroundCenter)
+                    pause(500)
+                    tiles.setTileAt(tiles.getTileLocation(13, 8), sprites.dungeon.darkGroundCenter)
+                    pause(500)
+                    tiles.setTileAt(tiles.getTileLocation(13, 9), sprites.dungeon.darkGroundCenter)
                 }
                 if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark0)) {
-                    tiles.setTileAt(tiles.getTileLocation(9, 4), sprites.dungeon.greenSwitchDown)
+                    tiles.setTileAt(tiles.getTileLocation(8, 0), sprites.dungeon.greenSwitchDown)
+                }
+            }
+        }
+        if (controller.B.isPressed()) {
+            if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchDown)) {
+                if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark1)) {
+                    tiles.setTileAt(tiles.getTileLocation(13, 0), sprites.dungeon.greenSwitchUp)
+                }
+                if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark0)) {
+                    tiles.setTileAt(tiles.getTileLocation(8, 0), sprites.dungeon.greenSwitchUp)
                 }
             }
         }
@@ -670,12 +688,12 @@ game.onUpdateInterval(100, function () {
     animation_check()
 })
 forever(function () {
+    level_7()
     level_1()
     level_2()
     level_3()
     level_4()
     level_5()
     level_6()
-    level_7()
     game.over(true, effects.confetti)
 })
