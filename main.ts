@@ -33,71 +33,6 @@ function level_prep (xp: number, yp: number) {
     scene.cameraFollowSprite(Cat)
     tiles.placeOnTile(Cat, tiles.getTileLocation(xp, yp))
 }
-function level_7 () {
-    tiles.setTilemap(tiles.createTilemap(
-            hex`100010000c160a0a0a160d0a200a0a0a0a200a0d190909090909141e211e1f1e1f221f1411090c0a0a0a0d1f0409090909041e14110919090909141e1f1e1f1e1f091f14110911091409181f1e1f1e1f1e091e1411091109140909090909090909091f14110911091409181f1e1f1e1f1e1f1e14110919091409141e1f1e1f1e1f1e1f14110909090909141f1e1f1e1f1e1f1e141109160a0d09141e09090909091e1f14110909091409181f091f1e1f1e1f1e14110917130e13141e091e1f1e1f1e1f14110911090909141f091f1e1f1e1f1e1411090f131709141e1c1e1f1e1f1a1f14190909090909141f1e1f1e1f1e1f1e140f17131313170e13131313131313130e`,
-            img`
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 . . . . . 2 . . . . . . . . 2 
-2 . 2 2 2 2 2 . . . . . . . . 2 
-2 . 2 . . . 2 . . . . . . . . 2 
-2 . 2 . 2 . 2 . . . . . . . . 2 
-2 . 2 . 2 . . . . . . . . . . 2 
-2 . 2 . 2 . 2 . . . . . . . . 2 
-2 . 2 . 2 . 2 . . . . . . . . 2 
-2 . . . . . 2 . . . . . . . . 2 
-2 . 2 2 2 . 2 . . . . . . . . 2 
-2 . . . 2 . 2 . . . . . . . . 2 
-2 . 2 2 2 2 2 . . . . . . . . 2 
-2 . 2 . . . 2 . . . . . . . . 2 
-2 . 2 2 2 . 2 . . . . . . . . 2 
-2 . . . . . 2 . . . . . . . . 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-`,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.greenSwitchUp,sprites.dungeon.floorDark0,sprites.dungeon.floorDark1],
-            TileScale.Sixteen
-        ))
-    level_prep(3, 12)
-    while (Break == 0) {
-        pause(100)
-        info.changeScoreBy(-1)
-        check_for_lava()
-        animation_check()
-        check_for_death()
-        check_for_chest(10000, 8, 13)
-        if (controller.A.isPressed()) {
-            if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchUp)) {
-                if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark1)) {
-                    tiles.setTileAt(tiles.getTileLocation(13, 0), sprites.dungeon.greenSwitchDown)
-                    pause(500)
-                    tiles.setTileAt(tiles.getTileLocation(13, 6), sprites.dungeon.darkGroundCenter)
-                    pause(500)
-                    tiles.setTileAt(tiles.getTileLocation(13, 7), sprites.dungeon.darkGroundCenter)
-                    pause(500)
-                    tiles.setTileAt(tiles.getTileLocation(13, 8), sprites.dungeon.darkGroundCenter)
-                    pause(500)
-                    tiles.setTileAt(tiles.getTileLocation(13, 9), sprites.dungeon.darkGroundCenter)
-                }
-                if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark0)) {
-                    tiles.setTileAt(tiles.getTileLocation(8, 0), sprites.dungeon.greenSwitchDown)
-                }
-            }
-        }
-        if (controller.B.isPressed()) {
-            if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchDown)) {
-                if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark1)) {
-                    tiles.setTileAt(tiles.getTileLocation(13, 0), sprites.dungeon.greenSwitchUp)
-                }
-                if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark0)) {
-                    tiles.setTileAt(tiles.getTileLocation(8, 0), sprites.dungeon.greenSwitchUp)
-                }
-            }
-        }
-        if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
-        }
-    }
-}
 function level_3 () {
     tiles.setTilemap(tiles.createTilemap(
             hex`100010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0b160a0b0b0b0a0b160b0d00000000100909091e1f1e1f1e1f1e1500000000190909091f1e1f1e1f1e1f180000000011090909090909091a1f1e1400000000100909091f1e1f1e1f1e1f1500000000100909091e1f1e1f1e1f1e1400000000190909091f1e1f1e1f1e1f1800000000110909091e1f1e1f1e1f1e15000000000f121713121212131317120e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
@@ -688,7 +623,6 @@ game.onUpdateInterval(100, function () {
     animation_check()
 })
 forever(function () {
-    level_7()
     level_1()
     level_2()
     level_3()
