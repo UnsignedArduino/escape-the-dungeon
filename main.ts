@@ -445,6 +445,24 @@ function check_for_lava () {
     if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.hazardLava1)) {
         game.over(false)
     }
+    if (Cat.tileKindAt(TileDirection.Center, myTiles.tile1)) {
+        game.over(false)
+    }
+    if (Cat.tileKindAt(TileDirection.Center, myTiles.tile2)) {
+        game.over(false)
+    }
+    if (Cat.tileKindAt(TileDirection.Center, myTiles.tile4)) {
+        game.over(false)
+    }
+    if (Cat.tileKindAt(TileDirection.Center, myTiles.tile6)) {
+        game.over(false)
+    }
+    if (Cat.tileKindAt(TileDirection.Center, myTiles.tile7)) {
+        game.over(false)
+    }
+    if (Cat.tileKindAt(TileDirection.Center, myTiles.tile8)) {
+        game.over(false)
+    }
 }
 controller.combos.attachCombo("aaba", function () {
     pause(500)
