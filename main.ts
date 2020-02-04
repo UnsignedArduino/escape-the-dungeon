@@ -366,7 +366,15 @@ controller.B.onEvent(ControllerButtonEvent.Released, function () {
 })
 controller.combos.attachCombo("lbrl", function () {
     pause(500)
-    tiles.setTileAt(tiles.getTileLocation(13, 7), sprites.dungeon.darkGroundCenter)
+    tiles.setTileAt(tiles.getTileLocation(10, 11), sprites.dungeon.darkGroundCenter)
+    pause(500)
+    tiles.setTileAt(tiles.getTileLocation(10, 12), sprites.dungeon.darkGroundCenter)
+    pause(500)
+    tiles.setTileAt(tiles.getTileLocation(10, 13), sprites.dungeon.darkGroundCenter)
+    pause(500)
+    tiles.setTileAt(tiles.getTileLocation(11, 13), sprites.dungeon.darkGroundCenter)
+    pause(500)
+    tiles.setTileAt(tiles.getTileLocation(12, 13), sprites.dungeon.darkGroundCenter)
     controller.combos.detachCombo("lbrl")
 })
 function level_6 () {
