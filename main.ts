@@ -179,21 +179,23 @@ function level_8 () {
         if (controller.B.isPressed()) {
             if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchDown)) {
                 if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark4)) {
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(10, 0), sprites.dungeon.greenSwitchUp)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(11, 2), sprites.dungeon.darkGroundCenter)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(12, 2), sprites.dungeon.darkGroundCenter)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(13, 2), sprites.dungeon.darkGroundCenter)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(13, 3), sprites.dungeon.darkGroundCenter)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(13, 4), sprites.dungeon.darkGroundCenter)
                 }
                 if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark0)) {
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(9, 4), sprites.dungeon.greenSwitchDown)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(11, 9), sprites.dungeon.darkGroundCenter)
                 }
             }
@@ -365,15 +367,15 @@ controller.B.onEvent(ControllerButtonEvent.Released, function () {
     controller.moveSprite(Cat, 100, 100)
 })
 controller.combos.attachCombo("lbrl", function () {
-    pause(500)
+    pause(100)
     tiles.setTileAt(tiles.getTileLocation(10, 11), sprites.dungeon.darkGroundCenter)
-    pause(500)
+    pause(100)
     tiles.setTileAt(tiles.getTileLocation(10, 12), sprites.dungeon.darkGroundCenter)
-    pause(500)
+    pause(100)
     tiles.setTileAt(tiles.getTileLocation(10, 13), sprites.dungeon.darkGroundCenter)
-    pause(500)
+    pause(100)
     tiles.setTileAt(tiles.getTileLocation(11, 13), sprites.dungeon.darkGroundCenter)
-    pause(500)
+    pause(100)
     tiles.setTileAt(tiles.getTileLocation(12, 13), sprites.dungeon.darkGroundCenter)
     controller.combos.detachCombo("lbrl")
 })
@@ -417,26 +419,26 @@ function level_6 () {
             if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchUp)) {
                 if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark1)) {
                     tiles.setTileAt(tiles.getTileLocation(3, 4), sprites.dungeon.greenSwitchDown)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(6, 8), sprites.dungeon.darkGroundCenter)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(7, 8), sprites.dungeon.darkGroundCenter)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(8, 8), sprites.dungeon.darkGroundCenter)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(9, 8), sprites.dungeon.darkGroundCenter)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(10, 8), sprites.dungeon.darkGroundCenter)
                     tiles.setTileAt(tiles.getTileLocation(9, 7), sprites.dungeon.darkGroundCenter)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(11, 8), sprites.dungeon.darkGroundCenter)
                     tiles.setTileAt(tiles.getTileLocation(9, 6), sprites.dungeon.darkGroundNorth)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(11, 7), sprites.dungeon.darkGroundCenter)
                 }
                 if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.floorDark0)) {
                     tiles.setTileAt(tiles.getTileLocation(9, 4), sprites.dungeon.greenSwitchDown)
-                    pause(500)
+                    pause(100)
                     tiles.setTileAt(tiles.getTileLocation(11, 9), sprites.dungeon.darkGroundCenter)
                 }
             }
@@ -473,7 +475,7 @@ function check_for_lava () {
     }
 }
 controller.combos.attachCombo("aaba", function () {
-    pause(500)
+    pause(100)
     tiles.setTileAt(tiles.getTileLocation(13, 7), sprites.dungeon.darkGroundCenter)
     controller.combos.detachCombo("aaba")
 })
@@ -522,7 +524,7 @@ function level_4 () {
     }
 }
 controller.combos.attachCombo("uudda", function () {
-    pause(500)
+    pause(100)
     tiles.setTileAt(tiles.getTileLocation(6, 6), sprites.dungeon.darkGroundCenter)
     controller.combos.detachCombo("uudda")
 })
@@ -619,14 +621,14 @@ controller.A.onEvent(ControllerButtonEvent.Released, function () {
     controller.moveSprite(Cat, 100, 100)
 })
 controller.combos.attachCombo("uudl", function () {
-    pause(500)
+    pause(100)
     tiles.setTileAt(tiles.getTileLocation(13, 5), sprites.dungeon.darkGroundCenter)
-    pause(500)
+    pause(100)
     tiles.setTileAt(tiles.getTileLocation(13, 6), sprites.dungeon.darkGroundCenter)
     controller.combos.detachCombo("uudl")
 })
 controller.combos.attachCombo("abaab", function () {
-    pause(500)
+    pause(100)
     tiles.setTileAt(tiles.getTileLocation(11, 8), sprites.dungeon.darkGroundCenter)
     controller.combos.detachCombo("abaab")
 })
