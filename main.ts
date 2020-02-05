@@ -284,6 +284,13 @@ function level_3 () {
         }
     }
 }
+controller.combos.attachCombo("abab", function () {
+    if (TileSetX.length == 0) {
+        controller.combos.detachCombo("abab")
+    } else {
+        tiles.setTileAt(tiles.getTileLocation(TileSetX.shift(), TileSetY.shift()), sprites.dungeon.darkGroundCenter)
+    }
+})
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(Cat, 50, 50)
 })
@@ -365,28 +372,42 @@ function check_for_death () {
 }
 function level_9 () {
     tiles.setTilemap(tiles.createTilemap(
-            hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            hex`1000100007080f080808080808080808080808090a15151514131413141314131515150b121515151515151515151515151715100a15151514131413141314131515150b0a14131413140506050613141315130b0a13151314131413141313131315140b0a14131413141314131413141315130b0a13151315131513151315131415140b0a14131413141314131413141315130b0a13151315131513151315131415140b0a14131413141314131413141315130b0a13151315131513151315131415140b0a14131413141314131413141314130b121315131513151315131513151614100a14131413141314131413141314130b0c0e110e0e0e0e0e0e0e0e0e0e110e0d`,
             img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest],
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterWest2,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.darkGroundCenter,sprites.dungeon.collectibleInsignia,sprites.dungeon.chestClosed,sprites.dungeon.chestOpen,sprites.dungeon.doorLockedEast,sprites.dungeon.doorClosedEast,sprites.dungeon.doorOpenEast,sprites.dungeon.buttonTeal,sprites.dungeon.buttonTealDepressed],
             TileScale.Sixteen
         ))
+    TileSetX = [2, 2, 2, 2, 2, 3, 4, 4, 4, 5, 6, 6, 6, 7, 8, 8, 8, 9, 10, 10, 10, 11]
+    TileSetY = [4, 6, 8, 10, 12, 13, 12, 10, 8, 7, 8, 10, 12, 13, 12, 10, 8, 7, 8, 10, 12, 13]
+    level_prep(2, 2)
+    while (Break == 0) {
+        pause(100)
+        info.changeScoreBy(-1)
+        check_for_lava()
+        animation_check()
+        check_for_death()
+        check_for_chest(5000, 13, 2)
+        if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
+            finished_level()
+        }
+    }
 }
 controller.B.onEvent(ControllerButtonEvent.Released, function () {
     controller.moveSprite(Cat, 100, 100)
@@ -657,9 +678,11 @@ controller.combos.attachCombo("abaab", function () {
     tiles.setTileAt(tiles.getTileLocation(11, 8), sprites.dungeon.darkGroundCenter)
     controller.combos.detachCombo("abaab")
 })
-let Break = 0
-let Dead = 0
-let Streak = 0
+let TileSetY: number[] = []
+let TileSetX: number[] = []
+let Break: number = []
+let Dead: number = []
+let Streak: number = []
 let Cat: Sprite = null
 Cat = sprites.create(img`
 e e e . . . . e e e . . . . 
@@ -887,6 +910,7 @@ game.onUpdateInterval(100, function () {
     animation_check()
 })
 forever(function () {
+    level_9()
     level_1()
     level_2()
     level_3()
