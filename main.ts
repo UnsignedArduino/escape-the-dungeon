@@ -142,7 +142,7 @@ namespace myTiles {
 }
 function level_8 () {
     tiles.setTilemap(tiles.createTilemap(
-            hex`1000100007080f080808090808081808080f08090a13131313130e1617161c161716170e1213070808130e1313131b17161716100a190a1313130e13171617161716170e07080a13070f08130e0101030417160e0a1313130a131313101617161716170e0a130a130a130a130e0505060517160e0a13121313130a130e1617161716170e0a130a130a1312130e0406020413160e0a130b0c0a130808091617161713170e0a130a130a1313130e1313131313160e0b0c12130b0c0c130e1617161716170e0a130a1313131313101716171617160e12130b110c130e0c0d161716171a17100a13131313130e17161716171617160e0b0c110c0c0c0d0c0c0c0c0c0c110c0d`,
+            hex`1000100007210f082121090821211808210f0809151313131313221617161c1617161722121307210813221313131b17161716100a190a1313130e13171617161716170e07211513070f21130e0101030417162215131313151313131016171617161722151315130a13151322050506051716220a13121313130a130e161716171617220a1315130a1312130e0406020413160e15130b0c15130821091617161713170e0a130a13151313130e131313131316220b0c12130b0c231322161716171617220a13151313131313101716171617160e12130b1123130e230d161716171a1710151313131313221716171617161716220b231123230c0d0c0c230c0c2311230d`,
             img`
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 . . . . . 2 . . . . . . . . 2 
@@ -161,7 +161,7 @@ function level_8 () {
 2 . . . . . 2 . . . . . . . . 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterWest2,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenInnerSouthWest,sprites.dungeon.greenOuterWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.greenSwitchDown,sprites.dungeon.chestClosed,sprites.dungeon.collectibleInsignia,sprites.dungeon.darkGroundNorth,sprites.dungeon.floorDark4,sprites.dungeon.doorClosedNorth,sprites.dungeon.chestOpen,sprites.dungeon.darkGroundSouth,sprites.dungeon.greenSwitchUp],
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterWest2,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenInnerSouthWest,sprites.dungeon.greenOuterWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.greenSwitchDown,sprites.dungeon.chestClosed,sprites.dungeon.collectibleInsignia,sprites.dungeon.darkGroundNorth,sprites.dungeon.floorDark4,sprites.dungeon.doorClosedNorth,sprites.dungeon.chestOpen,sprites.dungeon.darkGroundSouth,sprites.dungeon.greenSwitchUp,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterSouth0],
             TileScale.Sixteen
         ))
     level_prep(1, 12)
@@ -362,6 +362,31 @@ function check_for_death () {
     if (Dead == 1) {
         game.over(false)
     }
+}
+function level_9 () {
+    tiles.setTilemap(tiles.createTilemap(
+            hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest],
+            TileScale.Sixteen
+        ))
 }
 controller.B.onEvent(ControllerButtonEvent.Released, function () {
     controller.moveSprite(Cat, 100, 100)
