@@ -862,7 +862,6 @@ game.onUpdateInterval(100, function () {
     animation_check()
 })
 forever(function () {
-    level_8()
     level_1()
     level_2()
     level_3()
@@ -870,5 +869,6 @@ forever(function () {
     level_5()
     level_6()
     level_7()
+    level_8()
     game.over(true, effects.confetti)
 })
