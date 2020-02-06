@@ -680,9 +680,9 @@ controller.combos.attachCombo("abaab", function () {
 })
 let TileSetY: number[] = []
 let TileSetX: number[] = []
-let Break: number = []
-let Dead: number = []
-let Streak: number = []
+let Break = 0
+let Dead = 0
+let Streak = 0
 let Cat: Sprite = null
 Cat = sprites.create(img`
 e e e . . . . e e e . . . . 
@@ -910,7 +910,6 @@ game.onUpdateInterval(100, function () {
     animation_check()
 })
 forever(function () {
-    level_9()
     level_1()
     level_2()
     level_3()
@@ -919,5 +918,6 @@ forever(function () {
     level_6()
     level_7()
     level_8()
+    level_9()
     game.over(true, effects.confetti)
 })
