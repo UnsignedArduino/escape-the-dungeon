@@ -285,7 +285,7 @@ function level_3 () {
     }
 }
 controller.combos.attachCombo("abab", function () {
-    if (TileSetX.length == 0) {
+    if (TileSetX.length == 0 && TileSetY.length == 0) {
         controller.combos.detachCombo("abab")
     } else {
         tiles.setTileAt(tiles.getTileLocation(TileSetX.shift(), TileSetY.shift()), sprites.dungeon.darkGroundCenter)
