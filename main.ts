@@ -139,6 +139,139 @@ namespace myTiles {
 2 2 5 5 5 5 5 5 5 5 5 5 5 4 2 4 
 2 2 2 2 4 4 4 4 4 4 4 4 4 2 2 4 
 `
+    //% blockIdentity=images._tile
+    export const tile9 = img`
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 6 6 9 9 c c c c 9 9 6 6 9 6 
+6 6 6 9 9 c c c c c 9 9 9 6 6 6 
+6 6 9 9 9 c c 9 c c 9 9 9 9 6 6 
+6 9 9 9 9 9 9 9 c c 9 9 9 9 9 6 
+6 9 9 9 9 9 9 9 c c 9 9 9 9 9 6 
+6 9 9 9 9 9 9 9 c c 9 9 9 9 9 6 
+6 9 9 9 9 9 9 9 c c 9 9 9 9 9 6 
+6 6 9 9 9 9 9 9 c c 9 9 9 9 6 6 
+6 6 6 9 9 c c c c c c 9 9 6 6 6 
+6 9 6 6 9 c c c c c c 9 6 6 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+`
+    //% blockIdentity=images._tile
+    export const tile10 = img`
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 6 6 9 9 c c c c 9 9 6 6 9 6 
+6 6 6 9 9 c c c c c c 9 9 6 6 6 
+6 6 9 9 9 c c 9 9 c c 9 9 9 6 6 
+6 9 9 9 9 9 9 9 c c c 9 9 9 9 6 
+6 9 9 9 9 9 9 c c c 9 9 9 9 9 6 
+6 9 9 9 9 9 c c c 9 9 9 9 9 9 6 
+6 9 9 9 9 c c c 9 9 9 9 9 9 9 6 
+6 6 9 9 9 c c c c c c 9 9 9 6 6 
+6 6 6 9 9 c c c c c c 9 9 6 6 6 
+6 9 6 6 9 9 9 9 9 9 9 9 6 6 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+`
+    //% blockIdentity=images._tile
+    export const tile11 = img`
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 6 6 9 9 c c c c 9 9 6 6 9 6 
+6 6 6 9 9 c c c c c c 9 9 6 6 6 
+6 6 9 9 9 c c 9 9 c c 9 9 9 6 6 
+6 9 9 9 9 9 9 9 9 c c 9 9 9 9 6 
+6 9 9 9 9 9 c c c c c 9 9 9 9 6 
+6 9 9 9 9 9 c c c c c 9 9 9 9 6 
+6 9 9 9 9 9 9 9 9 c c 9 9 9 9 6 
+6 6 9 9 9 c c 9 9 c c 9 9 9 6 6 
+6 6 6 9 9 c c c c c c 9 9 6 6 6 
+6 9 6 6 9 9 c c c c 9 9 6 6 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+`
+    //% blockIdentity=images._tile
+    export const tile12 = img`
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 6 6 9 9 9 9 9 9 9 9 6 6 9 6 
+6 6 6 9 9 c c 9 9 c c 9 9 6 6 6 
+6 6 9 9 9 c c 9 9 c c 9 9 9 6 6 
+6 9 9 9 9 c c 9 9 c c 9 9 9 9 6 
+6 9 9 9 9 c c c c c c 9 9 9 9 6 
+6 9 9 9 9 c c c c c c 9 9 9 9 6 
+6 9 9 9 9 9 9 9 9 c c 9 9 9 9 6 
+6 6 9 9 9 9 9 9 9 c c 9 9 9 6 6 
+6 6 6 9 9 9 9 9 9 c c 9 9 6 6 6 
+6 9 6 6 9 9 9 9 9 9 9 9 6 6 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+`
+    //% blockIdentity=images._tile
+    export const tile13 = img`
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 6 6 9 9 9 9 9 9 9 9 6 6 9 6 
+6 6 6 9 9 c c c c c c 9 9 6 6 6 
+6 6 9 9 9 c c c c c c 9 9 9 6 6 
+6 9 9 9 9 c c 9 9 9 9 9 9 9 9 6 
+6 9 9 9 9 c c c c c c 9 9 9 9 6 
+6 9 9 9 9 c c c c c c 9 9 9 9 6 
+6 9 9 9 9 9 9 9 9 c c 9 9 9 9 6 
+6 6 9 9 9 c c c c c c 9 9 9 6 6 
+6 6 6 9 9 c c c c c c 9 9 6 6 6 
+6 9 6 6 9 9 9 9 9 9 9 9 6 6 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+`
+    //% blockIdentity=images._tile
+    export const tile14 = img`
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 6 6 9 9 c c c c 9 9 6 6 9 6 
+6 6 6 9 9 c c c c c c 9 9 6 6 6 
+6 6 9 9 c c c 9 9 c c 9 9 9 6 6 
+6 9 9 9 c c 9 9 9 9 9 9 9 9 9 6 
+6 9 9 9 c c c c c c c 9 9 9 9 6 
+6 9 9 9 c c c c c c c c 9 9 9 6 
+6 9 9 9 c c 9 9 9 9 c c 9 9 9 6 
+6 6 9 9 c c c 9 9 c c c 9 9 6 6 
+6 6 6 9 9 c c c c c c 9 9 6 6 6 
+6 9 6 6 9 9 c c c c 9 9 6 6 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+`
+    //% blockIdentity=images._tile
+    export const tile15 = img`
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 6 6 9 9 9 9 9 9 9 9 6 6 9 6 
+6 6 6 9 9 c c c c c c 9 9 6 6 6 
+6 6 9 9 9 c c c c c c 9 9 9 6 6 
+6 9 9 9 9 9 9 9 9 c c 9 9 9 9 6 
+6 9 9 9 9 9 9 9 c c c 9 9 9 9 6 
+6 9 9 9 9 9 9 c c c 9 9 9 9 9 6 
+6 9 9 9 9 9 c c c 9 9 9 9 9 9 6 
+6 6 9 9 9 c c c 9 9 9 9 9 9 6 6 
+6 6 6 9 9 c c 9 9 9 9 9 9 6 6 6 
+6 9 6 6 9 9 9 9 9 9 9 9 6 6 9 6 
+6 9 9 6 6 9 9 9 9 9 9 6 6 9 9 6 
+6 9 9 9 6 6 9 9 9 9 6 6 9 9 9 6 
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+`
 }
 function level_8 () {
     tiles.setTilemap(tiles.createTilemap(
@@ -161,7 +294,7 @@ function level_8 () {
 2 . . . . . 2 . . . . . . . . 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterWest2,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenInnerSouthWest,sprites.dungeon.greenOuterWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.greenSwitchDown,sprites.dungeon.chestClosed,sprites.dungeon.collectibleInsignia,sprites.dungeon.darkGroundNorth,sprites.dungeon.floorDark4,sprites.dungeon.doorClosedNorth,sprites.dungeon.chestOpen,sprites.dungeon.darkGroundSouth,sprites.dungeon.greenSwitchUp,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterSouth0],
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterWest2,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenInnerSouthWest,sprites.dungeon.greenOuterWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.greenSwitchDown,sprites.dungeon.chestClosed,sprites.dungeon.collectibleInsignia,sprites.dungeon.darkGroundNorth,sprites.dungeon.floorDark4,sprites.dungeon.doorClosedNorth,sprites.dungeon.chestOpen,sprites.dungeon.darkGroundSouth,sprites.dungeon.greenSwitchUp,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterSouth0,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
     level_prep(1, 12)
@@ -230,7 +363,7 @@ function level_7 () {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.chestOpen,sprites.dungeon.greenSwitchUp,sprites.dungeon.greenSwitchDown,sprites.dungeon.floorLight0,sprites.dungeon.floorLight4,sprites.dungeon.floorDark0,sprites.dungeon.floorDark1,sprites.dungeon.darkGroundSouthEast1,sprites.dungeon.purpleSwitchUp,sprites.dungeon.collectibleBlueCrystal,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.hazardWater],
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.chestOpen,sprites.dungeon.greenSwitchUp,sprites.dungeon.greenSwitchDown,sprites.dungeon.floorLight0,sprites.dungeon.floorLight4,sprites.dungeon.floorDark0,sprites.dungeon.floorDark1,sprites.dungeon.darkGroundSouthEast1,sprites.dungeon.purpleSwitchUp,sprites.dungeon.collectibleBlueCrystal,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.hazardWater,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
     level_prep(11, 6)
@@ -268,7 +401,7 @@ function level_3 () {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8],
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
     level_prep(4, 7)
@@ -315,7 +448,7 @@ function level_2 () {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8],
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
     level_prep(3, 4)
@@ -351,7 +484,7 @@ function level_1 () {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8],
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
     level_prep(5, 7)
@@ -391,7 +524,7 @@ function level_9 () {
 2 . . . . . . . . . . . . . . 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterWest2,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.darkGroundCenter,sprites.dungeon.collectibleInsignia,sprites.dungeon.chestClosed,sprites.dungeon.chestOpen,sprites.dungeon.doorLockedEast,sprites.dungeon.doorClosedEast,sprites.dungeon.doorOpenEast,sprites.dungeon.buttonTeal,sprites.dungeon.buttonTealDepressed],
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterWest2,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.darkGroundCenter,sprites.dungeon.collectibleInsignia,sprites.dungeon.chestClosed,sprites.dungeon.chestOpen,sprites.dungeon.doorLockedEast,sprites.dungeon.doorClosedEast,sprites.dungeon.doorOpenEast,sprites.dungeon.buttonTeal,sprites.dungeon.buttonTealDepressed,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
     TileSetX = [2, 2, 2, 2, 2, 3, 4, 4, 4, 5, 6, 6, 6, 7, 8, 8, 8, 9, 10, 10, 10, 11]
@@ -446,7 +579,7 @@ function level_6 () {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.chestOpen,sprites.dungeon.greenSwitchUp,sprites.dungeon.greenSwitchDown,sprites.dungeon.floorLight0,sprites.dungeon.floorLight4,sprites.dungeon.floorDark0,sprites.dungeon.floorDark1,sprites.dungeon.darkGroundSouthEast1,sprites.dungeon.purpleSwitchUp,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8],
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.chestOpen,sprites.dungeon.greenSwitchUp,sprites.dungeon.greenSwitchDown,sprites.dungeon.floorLight0,sprites.dungeon.floorLight4,sprites.dungeon.floorDark0,sprites.dungeon.floorDark1,sprites.dungeon.darkGroundSouthEast1,sprites.dungeon.purpleSwitchUp,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
     level_prep(4, 6)
@@ -553,7 +686,7 @@ function level_4 () {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8],
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
     level_prep(4, 6)
@@ -595,7 +728,7 @@ function level_5 () {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.chestOpen,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8],
+            [myTiles.tile0,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterWest2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath3,sprites.dungeon.chestClosed,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.chestOpen,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
     level_prep(4, 6)
@@ -902,7 +1035,7 @@ f b d d b b d d 2 b f d f .
 }
 animation.attachAnimation(Cat, CatSlowWalkAnim)
 animation.setAction(Cat, ActionKind.Idle)
-game.showLongText("Welcome to Escape the Dungeon! " + "In this game, you will have to get to a teleporter " + "(One of those blue squares) " + "before time runs out! " + "Use A to accelerate and unlock a lever when nearby. " + "Use B to creep along and lock levers. " + "Have fun, and get out! ", DialogLayout.Bottom)
+game.showLongText("Welcome to Escape the Dungeon's lobby! " + "Start a level by standing on a blue square with the level you want. " + "In this game, you will have to get to a teleporter " + "(One of those blue squares) " + "before time runs out! " + "Use A to accelerate and unlock a lever when nearby. " + "Use B to creep along and lock levers. Have fun!", DialogLayout.Bottom)
 Streak = 0
 Dead = 0
 info.setScore(0)
@@ -910,6 +1043,29 @@ game.onUpdateInterval(100, function () {
     animation_check()
 })
 forever(function () {
+    tiles.setTilemap(tiles.createTilemap(
+            hex`2000100000000000000000000000000000000000000000000000000000000000000000000007081215120808120808081508081208081215120808121212081512080900000c191b1a191b1a191b1a191b1a13131313191b1a191b1a191b1a191b1a0e0000111e24141e25141e26141e2714131313131e28141e29141e2a141e1d1410000018211f20211f20211f20211f2013131313211f20211f20211f20211f2016000011131313131313131313131313131313131313131313131313131313131000000c131313131313131313131313191b1b1a1313131313131313131313130e00000c1313131313131313131313131e2223141313131313131313131313130e0000111313131313131313131313131e2322141313131313131313131313130e00000c131313131313131313131313211f1f201313131313131313131313131000000c131313131313131313131313131313131313131313131313131313130e000018191b1a191b1a191b1a191b1a13131313191b1a191b1a191b1a191b1a160000111e1d141e1d141e1d141e1d14131313131e1d141e1d141e1d141e1d141000000c211f20211f20211f20211f2013131313211f20211f20211f20211f200e00000b0d0f170d0d0d0f0d0d0f170d0d0f0d0d0f170f0d0d0d0f0d0d170f0d0a000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . 2 2 . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . 2 2 . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterNorth1,sprites.dungeon.darkGroundCenter,sprites.dungeon.darkGroundWest,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterWest2,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.darkGroundNorthEast1,sprites.dungeon.darkGroundSouth,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleInsignia,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundSouthEast1,sprites.dungeon.darkGroundSouthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
+            TileScale.Sixteen
+        ))
     level_1()
     level_2()
     level_3()
@@ -920,27 +1076,4 @@ forever(function () {
     level_8()
     level_9()
     game.over(true, effects.confetti)
-    tiles.setTilemap(tiles.createTilemap(
-            hex`2000100000000000000000000000000000000000000000000000000000000000000000000007081215120808120808081508081208081215120808121212081512080900000c191b1a191b1a191b1a191b1a13131313191b1a191b1a191b1a191b1a0e0000111e1d141e1d141e1d141e1d14131313131e1d141e1d141e1d141e1d1410000018211f20211f20211f20211f2013131313211f20211f20211f20211f2016000011131313131313131313131313131313131313131313131313131313131000000c131313131313131313131313131313131313131313131313131313130e00000c131313131313131313131313131313131313131313131313131313130e000011131313131313131313131313131313131313131313131313131313130e00000c131313131313131313131313131313131313131313131313131313131000000c131313131313131313131313131313131313131313131313131313130e000018191b1a191b1a191b1a191b1a13131313191b1a191b1a191b1a191b1a160000111e1d141e1d141e1d141e1d14131313131e1d141e1d141e1d141e1d141000000c211f20211f20211f20211f2013131313211f20211f20211f20211f200e00000b0d0f170d0d0d0f0d0d0f170d0d0f0d0d0f170f0d0d0d0f0d0d170f0d0a000000000000000000000000000000000000000000000000000000000000000000`,
-            img`
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-`,
-            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterNorth1,sprites.dungeon.darkGroundCenter,sprites.dungeon.darkGroundWest,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterWest2,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.darkGroundNorthEast1,sprites.dungeon.darkGroundSouth,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleInsignia,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundSouthEast1,sprites.dungeon.darkGroundSouthWest1],
-            TileScale.Sixteen
-        ))
 })
