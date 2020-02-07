@@ -1245,8 +1245,6 @@ forever(function () {
         } else if (Cat.tileKindAt(TileDirection.Center, myTiles.tile9)) {
             level_1()
             LobbyBreak = 1
-        } else {
-            game.showLongText("Sorry, but that level is not available!", DialogLayout.Bottom)
         }
     }
 })
