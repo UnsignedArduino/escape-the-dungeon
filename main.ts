@@ -920,4 +920,27 @@ forever(function () {
     level_8()
     level_9()
     game.over(true, effects.confetti)
+    tiles.setTilemap(tiles.createTilemap(
+            hex`2000100000000000000000000000000000000000000000000000000000000000000000000007081215120808120808081508081208081215120808121212081512080900000c191b1a191b1a191b1a191b1a13131313131b1a131b1a131b1a131b1a0e0000111e1d141e1d141e1d141e1d1413131313131d14131d14131d14131d1410000018211f20211f20211f20211f201313131313131313131313131313131316000011131313131313131313131313131313131313131313131313131313131000000c131313131313131313131313131313131313131313131313131313130e00000c131313131313131313131313131313131313131313131313131313130e000011131313131313131313131313131313131313131313131313131313130e00000c131313131313131313131313131313131313131313131313131313131000000c131313131313131313131313131313131313131313131313131313130e000018131b1a131b1a131b1a131b1a13131313131b1a131b1a131b1a131b1a16000011131d14131d14131d14131d1413131313131d14131d14131d14131d141000000c131313131313131313131313131313131313131313131313131313130e00000b0d0f170d0d0d0f0d0d0f170d0d0f0d0d0f170f0d0d0d0f0d0d170f0d0a000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+`,
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterNorth1,sprites.dungeon.darkGroundCenter,sprites.dungeon.darkGroundWest,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterWest2,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.darkGroundNorthEast1,sprites.dungeon.darkGroundSouth,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleInsignia,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundSouthEast1,sprites.dungeon.darkGroundSouthWest1],
+            TileScale.Sixteen
+        ))
 })
