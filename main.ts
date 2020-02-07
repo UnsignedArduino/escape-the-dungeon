@@ -174,7 +174,7 @@ function level_8 () {
         check_for_death()
         check_for_chest(10000, 1, 3)
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
+            finished_level(8)
         }
         if (controller.B.isPressed()) {
             if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchDown)) {
@@ -243,7 +243,7 @@ function level_7 () {
         check_for_death()
         check_for_chest(10000, 11, 10)
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
+            finished_level(7)
         }
     }
 }
@@ -280,7 +280,7 @@ function level_3 () {
         animation_check()
         check_for_death()
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
+            finished_level(3)
         }
     }
 }
@@ -326,7 +326,7 @@ function level_2 () {
         animation_check()
         check_for_death()
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
+            finished_level(2)
         }
     }
 }
@@ -361,7 +361,7 @@ function level_1 () {
         animation_check()
         check_for_death()
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
+            finished_level(1)
         }
     }
 }
@@ -405,7 +405,7 @@ function level_9 () {
         check_for_death()
         check_for_chest(5000, 13, 2)
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
+            finished_level(9)
         }
     }
 }
@@ -459,7 +459,7 @@ function level_6 () {
         check_for_death()
         check_for_chest(5000, 11, 10)
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
+            finished_level(6)
         }
         if (controller.A.isPressed()) {
             if (Cat.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchUp)) {
@@ -525,11 +525,11 @@ controller.combos.attachCombo("aaba", function () {
     tiles.setTileAt(tiles.getTileLocation(13, 7), sprites.dungeon.darkGroundCenter)
     controller.combos.detachCombo("aaba")
 })
-function finished_level () {
+function finished_level (level: number) {
     Break = 1
     Streak += 1
     info.stopCountdown()
-    game.showLongText("Level " + Streak + " Complete. (+1000) " + "Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Bottom)
+    game.showLongText("Level " + level + " Complete. (+1000) " + "Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Bottom)
     info.changeScoreBy(1000 + Streak * 1000)
 }
 function level_4 () {
@@ -565,7 +565,7 @@ function level_4 () {
         animation_check()
         check_for_death()
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
+            finished_level(4)
         }
     }
 }
@@ -608,7 +608,7 @@ function level_5 () {
         check_for_death()
         check_for_chest(2500, 11, 10)
         if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.collectibleInsignia)) {
-            finished_level()
+            finished_level(5)
         }
     }
 }
