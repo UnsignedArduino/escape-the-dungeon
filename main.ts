@@ -833,8 +833,8 @@ function finished_level (level: number) {
     Break = 1
     Streak += 1
     info.stopCountdown()
-    game.showLongText("Level " + level + " Complete. (+1000) " + "Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Bottom)
-    info.changeScoreBy(1000 + Streak * 1000)
+    game.showLongText("Level " + level + " Complete. (+" + level * 1000 + ") " + "Streak: " + Streak + " (+" + Streak * 1000 + ") " + "Total: " + (1000 + (info.score() + Streak * 1000)), DialogLayout.Bottom)
+    info.changeScoreBy(level * 1000 + Streak * 1000)
 }
 function level_4 () {
     tiles.setTilemap(tiles.createTilemap(
@@ -977,6 +977,33 @@ controller.combos.attachCombo("uudl", function () {
     tiles.setTileAt(tiles.getTileLocation(13, 6), sprites.dungeon.darkGroundCenter)
     controller.combos.detachCombo("uudl")
 })
+function update_lobby () {
+    tiles.setTilemap(tiles.createTilemap(
+            hex`2000100000000000000000000000000000000000000000000000000000000000000000000007081215120808120808081508081208081215120808121212081512080900000c191b1a191b1a191b1a191b1a13131313191b1a191b1a191b1a191b1a0e0000111e24141e26141e28141e2a14131313131e2c141e2e141e30141e321410000018211f20211f20211f20211f2013131313211f20211f20211f20211f2016000011131313131313131313131313131313131313131313131313131313131000000c131313131313131313131313191b1b1a1313131313131313131313130e00000c1313131313131313131313131e2223141313131313131313131313130e0000111313131313131313131313131e2322141313131313131313131313130e00000c131313131313131313131313211f1f201313131313131313131313131000000c131313131313131313131313131313131313131313131313131313130e000018191b1a191b1a191b1a191b1a13131313191b1a191b1a191b1a191b1a160000111e25141e27141e29141e2b14131313131e2d141e2f141e31141e33141000000c211f20211f20211f20211f2013131313211f20211f20211f20211f200e00000b0d0f170d0d0d0f0d0d0f170d0d36360d0f170f0d0d0d0f0d0d170f0d0a000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . 2 2 . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . 2 2 . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile4,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterNorth1,sprites.dungeon.darkGroundCenter,sprites.dungeon.darkGroundWest,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterWest2,sprites.dungeon.darkGroundNorthWest1,sprites.dungeon.darkGroundNorthEast1,sprites.dungeon.darkGroundSouth,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleInsignia,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundSouthEast1,sprites.dungeon.darkGroundSouthWest1,sprites.dungeon.hazardLava0,sprites.dungeon.hazardLava1,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,sprites.dungeon.stairLadder,sprites.dungeon.stairNorth,sprites.dungeon.doorOpenSouth,sprites.dungeon.doorClosedSouth,sprites.dungeon.doorLockedSouth,sprites.dungeon.stairSouth,sprites.castle.tilePath5],
+            TileScale.Sixteen
+        ))
+    tiles.placeOnTile(Cat, tiles.getTileLocation(3, 5))
+    scene.cameraFollowSprite(Cat)
+}
 controller.combos.attachCombo("abaab", function () {
     pause(100)
     tiles.setTileAt(tiles.getTileLocation(11, 8), sprites.dungeon.darkGroundCenter)
@@ -1206,13 +1233,19 @@ f b d d b b d d 2 b f d f .
 }
 animation.attachAnimation(Cat, CatSlowWalkAnim)
 animation.setAction(Cat, ActionKind.Idle)
-game.showLongText("Welcome to Escape the Dungeon's lobby! " + "Start a level by standing on a blue square with the level you want. " + "In this game, you will have to get to a teleporter " + "(One of those blue squares) " + "before time runs out! " + "Use A to accelerate and unlock a lever when nearby. " + "Use B to creep along and lock levers. Have fun!", DialogLayout.Bottom)
+game.showLongText("Welcome to Escape the Dungeon's lobby! " + "Start a level by standing on a blue square with the level you want. " + "In this game, you will have to get to a teleporter " + "(One of those blue squares) " + "before time runs out! " + "Use A to accelerate and unlock a lever when nearby. " + "Use B to creep along and lock levers. " + "When you are done, go to the exit and redeam your points. Have fun!", DialogLayout.Bottom)
 Streak = 0
 Dead = 0
 info.setScore(0)
+update_lobby()
 game.onUpdateInterval(100, function () {
     animation_check()
 })
 forever(function () {
-	
+    if (Cat.tileKindAt(TileDirection.Center, sprites.dungeon.doorOpenSouth)) {
+        game.over(true, effects.confetti)
+    } else if (Cat.tileKindAt(TileDirection.Center, myTiles.tile9)) {
+        level_1()
+        update_lobby()
+    }
 })
