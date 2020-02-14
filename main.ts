@@ -1261,8 +1261,11 @@ forever(function () {
     } else if (Cat.tileKindAt(TileDirection.Center, myTiles.tile15)) {
         level_7()
         update_lobby()
-    } else {
-        level_9()
+    } else if (Cat.tileKindAt(TileDirection.Center, myTiles.tile16)) {
         level_8()
+        update_lobby()
+    } else if (Cat.tileKindAt(TileDirection.Center, myTiles.tile17)) {
+        level_9()
+        update_lobby()
     }
 })
